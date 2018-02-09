@@ -34,7 +34,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Title}
+\title{Efficient AMG preconditioners on clusters of GPUs}
 
 % a short form should be given in case it is too long for the running head
 
@@ -68,11 +68,11 @@ Salvatore Filippone}
 
 
 \begin{abstract}
-Most of scientific applications require the solution of a large and sparse linear system of equations using iterative methods, this operation accounting for a large percentage of the computing time. In this cases the choice of the preconditioner is crucial for the convergence of the method.
+Many scientific applications require the solution of large and sparse linear systems of equations using iterative methods, this operation accounting for a large percentage of the computing time. In these cases the choice of the preconditioner is crucial for the convergence of the method.
 Given the broad range of applications, great effort has been put in the development of efficient  preconditioners ensuring algorithmic scalability: in this sense multigrid methods have been proved to be particularly promising.
-Additionally, the advent of GPUs, now found in many of the fastest supercomputers, poses the problem of efficient implementation of these algorithms on highly parallel architectures. 
-One of the greatest obstacle in the application of multigrid preconditioners on GPUs is given by the use of smoothers based on an incomplete LU factorization (ILU): this requires the solution of a sparse triangular linear system, which is extremely difficult to implement efficiently on GPUs. An alternative approach to ILU is using an approximate inverse (AINV) whose main kernel consist of a sparse matrix vector multiplication (SpMV). 
-In this paper, we will use the PSBLAS and MLD2P4 libraries to test the efficiency of multilevel preconditioners on GPUs on linear systems arising from groundwater modelling application of the filtration of 3D incompressible single-phase flows through anisotropic porous media.
+Additionally, the advent of GPUs, now found in many of the fastest supercomputers, poses the problem of efficient implementation of these algorithms on highly parallel architectures; this is made more difficult by the fact that the solution of sparse triangular systems, a common kernel in many types of preconditioners, is extremely inefficient on GPUs. 
+
+In this paper, we will use the PSBLAS and MLD2P4 libraries to explore the various issues that affect efficiency of multilevel preconditioners on GPUs, both in terms of execution speed and exploitation of computational cores, as well as the algorithmic efficiency in guaranteeing convergence to solution in a number of iterations independent of the degree of parallelism. These issues are investigated in the context of linear systems arising from groundwater modelling application of the filtration of 3D incompressible single-phase flows through anisotropic porous media.
 \keywords{}
 \end{abstract}
 
