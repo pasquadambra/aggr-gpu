@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This is the LaTeX source for the instructions to authors using
@@ -23,9 +22,6 @@
 \usepackage{graphicx}
 
 \usepackage{url}
-\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
-\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
-\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
@@ -34,7 +30,8 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Efficient AMG preconditioners on clusters of GPUs}
+%\title{Efficient AMG Preconditioners on Clusters of GPUs}
+\title{Efficient Algebraic Multigrid Preconditioners \\on Clusters of GPUs}
 
 % a short form should be given in case it is too long for the running head
 
@@ -45,10 +42,22 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Ambra Abdullahi Hassan%
-\and Valeria Cardellini\and Pasqua D'Ambra\and Daniela di Serafino\and\\
-Salvatore Filippone}
+\author{Ambra Abdullahi Hassan\inst{1}%
+\and Valeria Cardellini\inst{1} \and Pasqua D'Ambra\inst{2} \and \\ 
+Daniela di Serafino\inst{3} \and  Salvatore Filippone\inst{4}}
 %
+\institute{Universit\`a degli Studi di Roma ``Tor Vergata'', Roma, Italy\\
+ \email{\{ambra.abdullahi,cardellini\}@uniroma2.it}
+\and
+Istituto per le Applicazioni del Calcolo ``Mauro Picone'', CNR, Napoli, Italy\\
+ \email{pasqua.dambra@cnr.it}
+\and
+Universit\`a degli Studi della Campania ``Luigi Vanvitelli'', Caserta, Italy
+\email{daniela.diserafino@unicampania.it}
+\and
+ Cranfield University, Cranfield, UK\\
+ \email{salvatore.filippone@cranfield.ac.uk}
+}
 
 % (feature abused for this document to repeat the title also on left hand pages)
 
@@ -68,13 +77,18 @@ Salvatore Filippone}
 
 
 \begin{abstract}
-Many scientific applications require the solution of large and sparse linear systems of equations using iterative methods, this operation accounting for a large percentage of the computing time. In these cases the choice of the preconditioner is crucial for the convergence of the method.
-Given the broad range of applications, great effort has been put in the development of efficient  preconditioners ensuring algorithmic scalability: in this sense multigrid methods have been proved to be particularly promising.
-Additionally, the advent of GPUs, now found in many of the fastest supercomputers, poses the problem of efficient implementation of these algorithms on highly parallel architectures; this is made more difficult by the fact that the solution of sparse triangular systems, a common kernel in many types of preconditioners, is extremely inefficient on GPUs. 
+Many scientific applications require the solution of large and sparse linear systems of equations using iterative methods, this operation accounting for a large percentage of the computing time. In these cases, the choice of the preconditioner is crucial for the convergence of the iterative method.
+Given the broad range of applications, great effort has been put in the development of efficient  preconditioners ensuring algorithmic scalability: in this sense, multigrid methods have been proved to be particularly promising.
+Additionally, the advent of GPUs, now found in many of the fastest supercomputers, poses the problem of implementing efficiently these algorithms on highly parallel architectures; this is made more difficult by the fact that the solution of sparse triangular systems, a common kernel in many types of preconditioners, is extremely inefficient on GPUs. 
 
-In this paper, we will use the PSBLAS and MLD2P4 libraries to explore the various issues that affect efficiency of multilevel preconditioners on GPUs, both in terms of execution speed and exploitation of computational cores, as well as the algorithmic efficiency in guaranteeing convergence to solution in a number of iterations independent of the degree of parallelism. These issues are investigated in the context of linear systems arising from groundwater modelling application of the filtration of 3D incompressible single-phase flows through anisotropic porous media.
-\keywords{}
+In this paper, we use the PSBLAS and MLD2P4 libraries to explore various issues that affect the efficiency of multilevel preconditioners on GPUs, both in terms of execution speed and exploitation of computational cores, as well as the algorithmic efficiency in guaranteeing convergence to solution in a number of iterations independent of the parallelism degree. 
+We investigate these issues 
+%are investigated 
+in the context of linear systems arising from groundwater modeling application of the filtration of 3D incompressible single-phase flows through %anisotropic 
+porous media.
+
+\keywords{AMG, GPU, Linear systems, Scalability}
+
 \end{abstract}
-
 
 \end{document}
