@@ -1,3 +1,913 @@
+@string{ACMTMS_l="ACM Transactions on Mathematical Software"},
+@string{ACMTMS="ACM Trans. Math. Softw."},
+@string{CCPE_l="Concurrency and Computation: Practice \& Experience"},
+@string{CCPE="Concurr. Comput.: Pract. Exper."},
+@string{TPDS_l="IEEE Transactions on Parallel and Distributed Systems"},
+@string{TPDS="IEEE Trans. Parallel Distrib. Syst."},
+@string{JCAM_l="J. Computational Applied Mathematics"},
+ @string{JCAM= "J. Comput. Appl. Math."},
+@string{JPDC_l = "Journal of Parallel and Distributed Computing"},
+@string{JPDC= "J. Parallel Distrib. Comput."},
+@string{TOG="ACM Trans. Graph."},
+@string{SCIPROG="Sci. Program."},
+@string{PARCO="Parallel Comput."},
+@string{SIAMJSC="SIAM J. Sci. Comput."},
+@string{SUPCOMP="J. Supercomput."},
+@string{SCPE="Scalable Comput.: Pract. Exper."},
+@string{IJHPCA="Int. J. High Perform. Comput. Appl."},
+@string{IJHPCA_l="International Journal of High Performance Computing Applications"},
+@string{IEEETOC="IEEE Trans. Comput."},
+ 
+@Article{SBLAS,
+  author =    	 "Duff, I.S. and Marrone, M. and Radicati,
+		  G. and Vittoli, C.",
+  title = 	 "Level 3 Basic Linear Algebra
+		  Subprograms for Sparse Matrices: a User Level Interface",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 ACMTMS,
+  year = 	 "1997",
+  volume = 	 "23",
+  number = 	 "3",
+  pages = 	 "379--401",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+  month = 	 sep,
+
+@Misc{Sparse-Matrix,
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "Carney, S. and Heroux, M.A. and Li,
+		  G. and and Pozo, R. and Remington, K.A. and Wu, K.",
+  title = 	 "A Revised Proposal for a Sparse {BLAS} Toolkit",
+  OPThowpublished = "",
+  year = 	 "1996",
+  month = 	 "January",
+  note = 	 "SPARKER Working Note \# 3",
+  OPTannote = 	 ""
+}
+
+@article{567810,
+author = {Duff, Iain S. and Heroux, Michael A. and Pozo, Roldan},
+title = {An overview of the sparse basic linear algebra subprograms:
+The new standard from the BLAS technical forum},
+journal = {ACM Trans. Math. Softw.},
+volume = {28},
+number = {2},
+year = {2002},
+issn = {0098-3500},
+pages = {239--267},
+doi = {http://doi.acm.org/10.1145/567806.567810},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+
+@TechReport{BLASWS,
+  author = 	 "J. Dongarra and S. Hammarling and S. Ostrouchov",
+  title = 	 "{BLAS} Technical Workshop",
+  institution =  "University of Tennessee",
+  year = 	 "1995",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "{LAPACK Working Note \#109}",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  month = 	 "May",
+  OPTnote = 	 "",
+  note = 	 "{\tt http://www.netlib.org/lapack/lawns}"
+}
+
+@TechReport{petsc,
+  author = 	 "S. Balay and W. Gropp and L. Curfman McInnes and
+                  B. Smith", 
+  title = 	 "{PETSc 2.0} User Manual",
+  institution =  "Argonne National Laboratory",
+  number =	 "ANL-95/11 - Revision 2.0.22",
+  year = 	 "1995",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  month = 	 "",
+  OPTnote = 	 "",
+  note = 	 ""
+}
+
+@TechReport{aztec,
+  author = 	 "S.A. Hutchinson and L.V. Prevost and J.N. Shadid and
+                  C. Tong and R.S. Tuminaro", 
+  title = 	 "{Aztec } {U}ser's {G}uide. {V}ersion 2.0",
+  institution =  "Sandia National Laboratories",
+  year = 	 "1998",
+  month = jul,
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  month = 	 "",
+  OPTnote = 	 "",
+  note = 	 ""
+}
+
+@InProceedings{PSBLAS:CPH,
+  author = 	 "Cerioni, F. and Colajanni, M. and Filippone, S. and
+		  Maiolatesi, S. ",
+  title = 	 "A Proposal for Parallel Sparse {BLAS}",
+  booktitle =  "Proceedings of PARA~'96",
+  year = 	 "1996",
+  editor =  "J. Dongarra, J. Wasniewski and K. Madsen",
+  OPTkey = 	 "",
+  pages = 	 "166--175",
+  number = 	 "",
+  address = 	 "",
+  month = 	 "",
+  OPTnote = 	 "",
+  publisher = 	 "Springer Verlag"
+}
+
+@InProceedings{Filip:99,
+  author = 	 "Filippone, S. and Colajanni, M. and 
+		  Pascucci, D. ",
+  title = 	 "An object-oriented environment for sparse
+                  parallel computation on adaptive grids",
+  booktitle =    "Proceedings of IPPS/SPDP~'99",
+  year = 	 "1999",
+  editor =       "",
+  OPTkey = 	 "",
+  pages = 	 "",
+  number = 	 "",
+  address = 	 "San Juan, Puerto Rico",
+  month = 	 "Apr.",
+  OPTnote = 	 "",
+  publisher = 	 "IEEE Computer Society"
+}
+
+@TechReport{PSBLAS-TR,
+  author = 	 "Cerioni, F. and Colajanni, M. and Filippone, S. and
+		  Maiolatesi, S. ",
+  title = 	 "A Proposal for Parallel Sparse {BLAS}",
+  institution =  "University of Roma Tor Vergata",
+  year = 	 "1996",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "",
+  number = 	 "RI.96.05",
+  address = 	 "Department of Computer Science, Systems and
+		  Industrial Engineering",
+  month = 	 "March",
+  OPTnote = 	 "",
+  note = 	 ""
+}
+@TechReport{PSBLASUG,
+  author = 	 "Cerioni, F. and Colajanni, M. and Filippone, S. and
+		  Maiolatesi, S. ",
+  title = 	 "{PSBLAS} User's Guide",
+  institution =  "University of Roma Tor Vergata",
+  year = 	 "1996",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "",
+  number = 	 "RI.96.11",
+  address = 	 "Department of Computer Science, Systems and
+		  Industrial Engineering",
+  month = 	 "April",
+  OPTnote = 	 "",
+  note = 	 ""
+}
+
+@TechReport{PBLAS,
+  author = 	 "Choi, J. and Ostrouchov, S. and Petitet, A. and Walker,
+		  D. and Whaley, {R. Clint}",
+  title = 	 "A Proposal for a set of Parallel Basic Linear
+		  Algebra Subprograms",
+  institution =  "University of Tennessee",
+  year = 	 "1995",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "{LAPACK Working Note \#100}",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  month = 	 "May",
+  OPTnote = 	 "",
+  note = 	 "{\tt http://www.netlib.org/lapack/lawns}"
+}
+
+@Manual{MPI,
+  title = 	 "{MPI}: A Message-Passing Interface Standard, {Version 1.1}",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "{Message Passing Interface Forum}",
+  organization  = "University of Tennessee",
+  address = 	 "Knoxville, Tennessee",
+  OPTedition = 	 "",
+  year = 	 "1995",
+  month = 	 "June",
+  OPTannote = 	 ""
+}
+
+@Manual{MPI2,
+  title = 	 "{MPI-2}: Extensions to the Message-Passing Interface",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "{Message Passing Interface Forum}",
+  organization  = "University of Tennessee",
+  address = 	 "Knoxville, Tennessee",
+  OPTedition = 	 "",
+  year = 	 "1997",
+  month = 	 "",
+  OPTannote = 	 ""
+}
+
+@Manual{HPF,
+  title = 	 "High Performance Fortran Language Specification 1.1",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "{High Performance Fortran Forum}",
+  organization  = "Rice University",
+  address = 	 "Houston, Texas",
+  OPTedition = 	 "",
+  year = 	 "1994",
+  month = 	 "November",
+  OPTannote = 	 ""
+}
+
+@TechReport{BLACS,
+  author = 	 "J. Dongarra and R.C. Whaley",
+  title = 	 "A User's Guide to the {BLACS} v1.0",
+  institution =  "University of Tennessee",
+  year = 	 "1995",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "{LAPACK} Working Note \#94",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  month = 	 "June",
+  note = 	 "{\tt http://www.netlib.org/lapack/lawns}",
+  OPTannote = 	 ""
+}
+
+@TechReport{ScaLAPACK,
+  author = 	"Choi, J. and Demmel, J. and  Dhillon, J. and
+		  Dongarra, J. and  Ostrouchov, S. and Petitet, A. and
+		  Stanley, K. and  Walker, D. and Whaley, R.~C.", 
+  title = 	 "{ScaLAPACK}: A Portable Linear Algebra Library for
+		  Distributed Memory Computers",  
+  institution =  "University of Tennessee",
+  year = 	 "1995",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "{LAPACK Working Note \#95}",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  month = 	 "",
+  note = 	 "",
+  OPTannote = 	 "{\tt http://www.netlib.org/lapack/lawns}"
+}
+
+@Article{diffpack,
+  author =    	 "Bruaset, A.M. and Langtangen, H.P.",
+  title = 	 "Object-oriented design of preconditioned iterative
+                   methods in {D}iffpack",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 ACMTMS,
+  year = 	 "1997",
+  volume = 	 "23",
+  number = 	 "1",
+  pages = 	 "50--80",
+  month = 	 "March",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Misc{Sparse-Matrix,
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "Carney, S. and Heroux, M.A. and Li,
+		  G. and and Pozo, R. and Remington, K.A. and Wu, K.",
+  title = 	 "A Revised Proposal for a Sparse {BLAS} Toolkit",
+  OPThowpublished = "",
+  year = 	 "1996",
+  month = 	 "January",
+  note = 	 "SPARKER Working Note \# 3",
+  OPTannote = 	 ""
+}
+
+@Article{Parallel_Preconditioner,
+  author = 	 "Filippone, S. and Marrone, M. and Radicati
+		  di Brozolo, G.",
+  title = 	 "Parallel Preconditioned Conjugate-Gradient type
+		  Algorithms for general sparsity structures",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "Intern. J. Computer Math.",
+  year = 	 "1992",
+  volume = 	 "40",
+  OPTnumber = 	 "",
+  pages = 	 "159--167",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{FiMaRa:92,
+  author = 	 "Filippone, S. and Marrone, M. and Radicati
+		  di Brozolo, G.",
+  title = 	 "Parallel Preconditioned Conjugate-Gradient type
+		  Algorithms for general sparsity structures",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "Intern. J. Computer Math.",
+  year = 	 "1992",
+  volume = 	 "40",
+  OPTnumber = 	 "",
+  pages = 	 "159--167",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{ArDuRu:92,
+  author = 	 "Arioli, M. and Duff, I. and Ruiz, D.",
+  title = 	 "Stopping criteria for iterative solvers",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "SIAM J. Matrix Anal. Appl.",
+  year = 	 "1992",
+  volume = 	 "13",
+  OPTnumber = 	 "",
+  pages = 	 "138--144",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{PoSiLi:90,
+  author = 	 "Pothen, A. and Simon, H.D. and Liou, K.-P.",
+  title = 	 "Partitioning sparse matrices with eigenvectors of graphs",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "SIAM J. Matrix Anal. Appl.",
+  year = 	 "1990",
+  volume = 	 "11",
+  OPTnumber = 	 "",
+  pages = 	 "430--452",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{HenLel:95,
+  author = 	 "B. Hendrickson and R. Leland",
+  title = 	 "An improved spectral graph partitioning algorithm
+		  for mapping parallel computations",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 SIAMJSC,
+  year = 	 "1995",
+  volume = 	 "16",
+  number = 	 "2",
+  pages = 	 "452--469",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Manual{METIS,
+  title = 	 "{METIS}: Unstructured Graph Partitioning and
+		  Sparse Matrix Ordering System",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "Karypis, G. and Kumar, V.",
+  organization = "University of Minnesota, Department of Computer Science",
+  address = 	 "Minneapolis, MN 55455",
+  OPTedition = 	 "",
+  year = 	 "1995",
+  month = 	 "August",
+  note = 	 "Internet Address: {\verb|http://www.cs.umn.edu/~karypis|}",
+  OPTannote = 	 ""
+}
+
+@Book{Parallel_Computing,
+  author = 	 "Kai, H. and Fay\'e, A.B.",
+  title = 	 "Computer Architecture and Parallel Processing",
+  publisher = 	 "McGRAW-HILL",
+  year = 	 "1985",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{GarJoh:79,
+  author = 	 "Garey, Micahel R. and Johnson, David S.",
+  title = 	 "Computers and Intractability, A Guide to the Theory of {NP-Completeness}",
+  publisher = 	 "W. H. Freeman",
+  year = 	 "1979",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  address = 	 "New York",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{MeRe:90,
+  author = 	 "Metcalf, Michael and Reid, John",
+  title = 	 "Fortran 90 explained",
+  publisher = 	 "Oxford University Press",
+  year = 	 "1990",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{MeReCo:04,
+  author = 	 "Metcalf, Michael and Reid, John and Cohen, Malcolm",
+  title = 	 "Fortran 95/2003 explained",
+  publisher = 	 "Oxford University Press",
+  year = 	 "2004",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{KeIT:95,
+  author = 	 "C. T. Kelley",
+  title = 	 "Iterative Methods for Linear and Nonlinear Equations",
+  publisher = 	 "{SIAM}",
+  address = {Philadelphia}, 
+  year = 	 "1995",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{GreIT:97,
+  author = 	 "Greenbaum, A.",
+  title = 	 "Iterative Methods for Solving Linear Systems",
+  publisher = 	 "{SIAM}",
+  address = {Philadelphia, PA}, 
+  year = 	 "1997",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@InCollection{Domain_Decomp,
+  author = 	 "Dellagiacoma, F. and Paoletti, S. and Poggi, F. and
+		  Vitaletti, M.",
+  title = 	 "{\em A Domain Decomposition Environment for Local
+		  Time Dependent Problems}",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  booktitle = "Contemporary Mathematics",
+  publisher = "American Mathematical Society",
+  year = 	 "1992",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  number = 	 "157",
+  OPTseries = 	 "",
+  OPTtype = 	 "",
+  OPTchapter = 	 "",
+  OPTpages = 	 "",
+  address = 	 "Providence, Rhode Island",
+  OPTedition = 	 "",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{GolubVanloan,
+  author = 	 "Golub, G.H. and Van Loan, C.F.",
+  title = 	 "Matrix Computations",
+  publisher = 	 "John Hopkins University Press",
+  year = 	 "1990",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  OPTaddress = 	 "",
+  edition = 	 "Second",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Book{Templates,
+  title = 	 "Templates for the Solution of Linear Systems",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "R. Barrett and M. Berry and T. Chan and
+		  J. Demmel and J. Donat and J. Dongarra and
+		  V. Eijkhout and R. Pozo and C. Romine
+		  and H. van der Vorst",
+  publisher  =   "SIAM",
+  year       = 1993,
+  OPThowpublished = "",
+  OPTaddress = 	 "",
+  OPTmonth = 	 "",
+  OPTyear = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+ 
+@ARTICLE{BLAS1,
+     AUTHOR = "  Lawson, C. and Hanson, R. and Kincaid, D. and Krogh, F.",
+     TITLE = "Basic {L}inear {A}lgebra {S}ubprograms for {F}ortran usage",
+  JOURNAL = ACMTMS,
+     VOLUME = "5",
+     YEAR = "1979",
+     PAGES = "308--329"
+}
+
+@Article{BLAS3,
+  author = 	 "J. Dongarra and J. DuCroz and S. Hammarling
+		  and I. Duff",
+  title = 	 "A Set of level 3 Basic Linear Algebra Subprograms",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "ACM Trans. on Math. Soft.",
+  year = 	 "1990",
+  volume = 	 "16",
+  number = 	 "1",
+  pages = 	 "1--17",
+  month = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Manual{LAPACK,
+  title = 	 "LAPACK Users' Guide",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  author = 	 "Anderson, E. and Bai, Z. and Bischof, C. and Blackford, S. and Demmel, J. and Dongarra, J. and Du Croz, J. and Greenbaum, A. and Hammarling, S. and McKenney, A. and Sorensen, D.",
+  organization = "SIAM",
+  OPTaddress = 	 "",
+  edition = 	 "3rd",
+  year = 	 "1999",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{Paradigm:95,
+  author = 	 "P. Banerjee and J. Chandy and M. Gupta
+		  and E. Hodges IV and J. Holm and A.
+		  Lain and D. Palermo and S. Ramaswamy and
+		  E. Su",
+  title = 	 "The {Paradigm} Compiler for Distributed-Memory Multicomputers",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "Computer",
+  year = 	 "1995",
+  volume = 	 "28",
+  number = 	 "10",
+  pages = 	 "37--47",
+  month = 	 "October",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{Chaos:95,
+  author = 	 "R. Ponnusamy and J. Saltz and A. Choudhary and
+		  Y.-S. Hwang and G. Fox",
+  title = 	 "Runtime Support and Compilation Methods for
+		  Use-Specified Irregular Data Distributions",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "IEEE Trans. on Par. and Distributed Systems",
+  year = 	 "1995",
+  volume = 	 "6",
+  number = 	 "8",
+  pages = 	 "815--831",
+  month = 	 "August",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{Bi-CGSTAB,
+  author = 	 "H. van der Vorst",
+  title = 	 "{Bi-CGSTAB}: A fast and smoothly converging variant
+		  of {Bi-CG} for the solution o nonsymmetric linear
+		  systems", 
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "SIAM J. Sci. Statist. Comput.",
+  year = 	 "1992",
+  volume = 	 "13",
+  number = 	 "",
+  pages = 	 "631--644",
+  month = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@Article{MachDevi:97,
+  author = 	 "Machiels, L. and Deville, M.O.",
+  title = 	 "Fortran 90: An Entry to Object-Oriented Programming for the
+                  Solution of Partial Differential Equations", 
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 ACMTMS,
+  year = 	 "1997",
+  volume = 	 "23",
+  OPTnumber = 	 "1",
+  pages = 	 "32--49",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@ARTICLE{blas2,
+     AUTHOR = "Dongarra, J. J. and DuCroz, J. and Hammarling, S. and Hanson, R.",
+     TITLE = "An Extended Set of {F}ortran {B}asic {L}inear {A}lgebra {S}ubprograms",
+     JOURNAL = ACMTMS,
+     VOLUME = "14",
+     YEAR = "1988",
+     PAGES = "1--17"
+}
+
+
+@article{1089021,
+author = {Michael A. Heroux and Roscoe A. Bartlett and Vicki E. Howle and Robert J. Hoekstra and Jonathan J. Hu and Tamara G. Kolda and Richard B. Lehoucq and Kevin R. Long and Roger P. Pawlowski and Eric T. Phipps and Andrew G. Salinger and Heidi K. Thornquist and Ray S. Tuminaro and James M. Willenbring and Alan Williams and Kendall S. Stanley},
+title = {An overview of the {T}rilinos project},
+journal = ACMTMS,
+volume = {31},
+number = {3},
+year = {2005},
+issn = {0098-3500},
+pages = {397--423},
+doi = {http://doi.acm.org/10.1145/1089014.1089021},
+publisher = {ACM},
+address = {New York, NY, USA},
+}
+
+@book{DesignPatterns,
+ author = {Gamma, Erich and Helm, Richard and Johnson, Ralph and Vlissides, John },
+ title = {Design Patterns: Elements of Reusable  Object-Oriented Software},
+ year = {1995},
+ isbn = {0-201-63361-2},
+ publisher = {Addison-Wesley}, 
+ address = {Boston, MA},
+ }
+ 
+@inproceedings{679366,
+ author = {Gamma, Erich and Helm, Richard and Johnson, Ralph E. and Vlissides, John M.},
+ title = {Design Patterns: Abstraction and Reuse of Object-Oriented Design},
+ booktitle = {ECOOP '93: Proceedings of the 7th European Conference on Object-Oriented Programming},
+ year = {1993},
+ isbn = {3-540-57120-5},
+ pages = {406--431},
+ publisher = {Springer-Verlag},
+ address = {London, UK},
+ }
+
+
+@article{1644004,
+ author = {Rouson, Damian W. I. and Adalsteinsson, Helgi and Xia, Jim},
+ title = {Design patterns for multiphysics modeling in {Fortran} 2003 and {C++}},
+ journal = ACMTMS,
+ volume = {37},
+ number = {1},
+ year = {2010},
+ issn = {0098-3500},
+ pages = {1--30},
+ doi = {http://doi.acm.org/10.1145/1644001.1644004},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+
+@article{psblas,
+        author     = "Filippone, S. and  Colajanni, M.",
+        title      = "{PSBLAS}: a library for parallel linear algebra computations on sparse matrices",
+        journal    = ACMTMS,
+        volume = {26},
+        number = {4},
+        month = dec,
+        pages      = "527--550",
+        year       = 2000
+}
+
+
+@article{PSBLAS3,
+        author     = "Filippone, S. and  Buttari, A.",
+        title      = "Object-Oriented Techniques for Sparse Matrix Computations in {F}ortran 2003",
+        journal    = ACMTMS,
+        volume     = "38",
+        number      = "4",
+        pages = "23:1--23:20",
+        year       = 2012
+}
+
+
+@article{567810,
+ author = {Duff, Iain S. and Heroux, Michael A. and Pozo, Roldan},
+ title = {An overview of the sparse basic linear algebra subprograms: The new standard from the BLAS technical forum},
+ journal = {ACM Trans. Math. Softw.},
+ volume = {28},
+ number = {2},
+ year = {2002},
+ issn = {0098-3500},
+ pages = {239--267},
+ doi = {http://doi.acm.org/10.1145/567806.567810},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+
+@article{275327,
+ author = {Duff, Iain S. and Marrone, Michele and Radicati, Giuseppe and Vittoli, Carlo},
+ title = {Level 3 basic linear algebra subprograms for sparse matrices: a user-level interface},
+ journal = {ACM Trans. Math. Softw.},
+ volume = {23},
+ number = {3},
+ year = {1997},
+ issn = {0098-3500},
+ pages = {379--401},
+ doi = {http://doi.acm.org/10.1145/275323.275327},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+ 
+@article{MR2357729,
+    AUTHOR = {Buttari, Alfredo and D'Ambra, Pasqua and di Serafino, Daniela
+              and Filippone, Salvatore},
+     TITLE = {2{LEV}-{D}2{P}4: a package of high-performance preconditioners
+              for scientific and engineering applications},
+   JOURNAL = {Appl. Algebra Engrg. Comm. Comput.},
+  FJOURNAL = {Applicable Algebra in Engineering, Communication and
+              Computing},
+    VOLUME = {18},
+      YEAR = {2007},
+    NUMBER = {3},
+     PAGES = {223--239},
+      ISSN = {0938--1279},
+     CODEN = {AAECEW},
+   MRCLASS = {65F10 (15-04 15A06)},
+  MRNUMBER = {MR2357729},
+}
+
+@article {MR2355411,
+    AUTHOR = {D'Ambra, Pasqua and di Serafino, Daniela and Filippone,
+              Salvatore},
+     TITLE = {On the development of {PSBLAS}-based parallel two-level
+              {S}chwarz preconditioners},
+   JOURNAL = {Appl. Numer. Math.},
+  FJOURNAL = {Applied Numerical Mathematics. An IMACS Journal},
+    VOLUME = {57},
+      YEAR = {2007},
+    NUMBER = {11-12},
+     PAGES = {1181--1196},
+      ISSN = {0168--9274},
+     CODEN = {ANMAEL},
+   MRCLASS = {65F10},
+  MRNUMBER = {MR2355411},
+}
+
+
+@ARTICLE{mld-toms,
+    AUTHOR = {D'Ambra, Pasqua and di Serafino, Daniela and Filippone,
+              Salvatore},
+     TITLE = "{MLD2P4}: a Package of Parallel Algebraic Multilevel 
+Domain Decomposition Preconditioners in {Fortran 95}",
+     JOURNAL = ACMTMS,
+     VOLUME = "37",
+     pages = {7--23},
+     YEAR = "2010",
+     number=3
+}
+
+@article{RousonMorris:2010,
+  author =    "Morris, Karla and Rouson, Damian W. I. and  Lemaster, M.~Nicole",
+  title =  "{On the scalable development of portable object-oriented Fortran
+interfaces to C++: A PDE solver prototype}",
+    JOURNAL = ACMTMS,
+   year = 	 "2010",
+ note = 	 "in review"
+}
+
+@InProceedings{CATA:2010,
+  author = 	 "Martone, M. and Filippone, S. and Tucci, S. and  
+		  Paprzycki, M. and Ganzha, M.",
+  title = 	 "Utilizing Recursive Storage in Sparse Matrix-Vector
+                   Multiplication, Preliminary Considerations",
+  booktitle =    "Proceedings of CATA 2010",
+  year = 	 "2010",
+  editor =       "",
+  OPTkey = 	 "",
+  pages = 	 "",
+  number = 	 "",
+  address = 	 "Honolulu, HI, USA",
+  month = 	 "March",
+  OPTnote = 	 "",
+  publisher = 	 "International Society for Computers and Their Applications"
+}
+
+@misc{CUDPP,
+   author =   "",
+   key = "CUDPP",
+   title =   "{CUDPP: CUDA Data Parallel Primitives Library}",
+   note = "\url{http://gpgpu.org/developer/cudpp/}" }
+
+@inproceedings{Dotsenko08,
+ author = {Dotsenko, Yuri and Govindaraju, Naga K. and Sloan, Peter-Pike and Boyd, Charles and Manferdelli, John},
+ title = {Fast scan algorithms on graphics processors},
+ booktitle = {Proc. of 22nd Int'l Conference on Supercomputing},
+ year = {2008},
+ pages = {205--213},
+ publisher = {ACM},
+} 
+
+@TechReport{Bell08,
+  author = 	"Bell, N. and Garland, M.", 
+  title = 	 "Efficient sparse matrix-vector multiplication on {CUDA}",  
+  number = "NVR-2008-004",
+  institution =  "NVIDIA Corp.",
+  year = 	 "2008",
+}
+  month = 	dec,
+
+@TechReport{Bask09,
+  author = 	"Baskaran, M. M.  and Bordawekar, R.", 
+  title = 	 "Optimizing Sparse Matrix-Vector Multiplication on {GPUs}",  
+  number = "RC24704",
+  institution =  "IBM Research",
+  year = 	 "2009",
+}
+  month = 	 apr,
+
+@inproceedings{Bell09,
+ author = {Bell, N. and Garland, M.},
+ title = {Implementing sparse matrix-vector multiplication on throughput-oriented processors},
+ booktitle = {Proc. of Int'l Conf. on High Performance Computing Networking, Storage and Analysis},
+ series = {SC '09},
+  pages = {18:1--18:11},
+ year = {2009},
+ publisher = {ACM},
+} 
+ address = {New York, NY, USA},
+
+@article{Choi10,
+ author = {Choi, J. W. and Singh, A. and Vuduc, R. W.},
+ title = "Model-driven autotuning of sparse matrix-vector multiply on {GPUs}",
+ journal = {SIGPLAN Not.},
+ volume = {45},
+ issue = {5},
+ month = jan,
+ year = {2010},
+ pages = {115--126},
+} 
+
 @inproceedings{Luebke06,
  author = {Luebke, David and Harris, Mark and Govindaraju, Naga and Lefohn, Aaron and Houston, Mike and Owens, John and Segal, Mark and Papakipos, Matthew and Buck, Ian},
  title =" {GPGPU}: general-purpose computation on graphics hardware",
@@ -5,6 +915,1803 @@
  series = {SC '06},
  year = {2006},
 } 
+ publisher = {ACM},
+ address = {New York, NY, USA}, 
+
+@inproceedings{Barbieri09,
+ author = {Barbieri, D. and Cardellini, V. and Filippone, S.},
+ title ="Generalized {GEMM} applications on {GPGPU}s: experiments and applications",
+ year = {2010},
+ booktitle = {Parallel Computing: from Multicores and GPU's to Petascale},
+ series = {ParCo '09},
+ pages = {307--314},
+ publisher = {IOS Press}, 
+} 
+ address = {Amsterdam, The Netherlands}
+
+@inproceedings{Volkov08,
+ author = {Volkov, V. and Demmel, J. W.},
+ title = "Benchmarking {GPU}s to tune dense linear algebra",
+ booktitle = {Proc. of  2008 ACM/IEEE Conf. on Supercomputing},
+ series = {SC '08},
+ pages = {31:1--31:11},
+ year = {2008},
+} 
+  publisher = {IEEE},
+ address = {Piscataway, NJ, USA},
+
+@article{Barrachina09,
+ author = {Barrachina, Sergio and Castillo, Maribel and Igual, Francisco D. and Mayo, Rafael and Quintana-Ort\'{\i}, Enrique S. and Quintana-Ort\'{\i}, Gregorio},
+ title = {Exploiting the capabilities of modern GPUs for dense matrix computations},
+ journal = CCPE,
+ volume = {21},
+ issue = {18},
+ month = dec,
+ year = {2009},
+ pages = {2457--2477},
+} 
+ journal = {Concurr. Comput.: Pract. Exper.},
+
+@article{Lindholm08,
+ author = {Lindholm, E. and Nickolls, J. and Oberman, S. and Montrym, J.},
+ title = "{NVIDIA Tesla}: a unified graphics and computing architecture",
+ journal = {IEEE Micro},
+ volume = {28},
+ issue = {2},
+ month = mar,
+ year = {2008},
+ pages = {39--55},
+} 
+
+@book{rouson2011,
+  author =    "Rouson, D. W. I. and  Xia, J. and Xu, X.",
+  title =  "{Scientific Software Design: The Object-Oriented Way}",
+    publisher = "Cambridge University Press",
+   year = 	 "2011",
+}
+
+@book{gardner2007,
+  author =    "Gardner, H. and Manduchi, G.",
+  title =  "{Design Patterns for e-Science}",
+    publisher = "Springer",
+   year = 	 "2007",
+}
+
+@inproceedings{VazqELLR:2010, 
+  author={V\'{a}zquez, F. and Ortega, G. and Fern\'andez, J. J. and Garz\'on, E. M.},
+  title="{Improving the performance of the sparse matrix vector product with GPUs}", 
+  booktitle={Proc. of 10th IEEE Int'l Conf. on Computer and Information Technology}, 
+  series={CIT '10}, 
+  year={2010}, 
+  pages={1146--1151}
+}
+
+@article{VazqELLR:2011, 
+  author={V\'{a}zquez, F. and Fern\'andez, J. J. and Garz\'on, E. M.},
+title = "A new approach for sparse matrix vector product on {NVIDIA GPUs}",
+journal = CCPE,
+volume = {23},
+number = {8},
+publisher = {John Wiley & Sons, Ltd.},
+issn = {1532-0634},
+pages = {815--826},
+keywords = {GPU, high performance computing, sparse matrix vector product},
+year = {2011},
+}
+url = {http://dx.doi.org/10.1002/cpe.1658},
+doi = {10.1002/cpe.1658},
+
+@misc{CUSPARSE,
+   author =   "{NVIDIA Corp.}",
+   key = "CUSPARSE",
+   title =   "{CUDA cuSPARSE library}",
+   year = 2015,
+   note = "\url{http://developer.nvidia.com/cusparse}"
+ }
+
+@misc{CUSP,
+   author =   "",
+   key = "CUSP",
+   title =   "{CUSP : A C++ Templated Sparse Matrix Library}",
+   year = 2016,
+   note = "\url{http://cusplibrary.github.io}"
+ }
+   author =   "{NVIDIA Corp.}",
+
+@misc{Thrust,
+   author =   "{NVIDIA Corp.}",
+   key = "Thrust",
+   title =   "{CUDA Thrust library}",
+   year = 2012,
+   note = "\url{http://developer.nvidia.com/thrust}"
+ }
+
+@Article{NAdigest-07-12,
+  author =    	 {Davis, T.},
+  title = 	 "Wilkinson's sparse matrix definition",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "NA Digest",
+  year = 	 "2007",
+  volume = 	 "07",
+  number = 	 "12",
+  pages = 	 "379--401",
+  month = 	 mar,
+  OPTnote = 	 "",
+  annote = 	 "{\tt http://www.netlib.org/na-digest-html/07/v07n12.html}"
+}
+
+@incollection{BCFR:11,
+   author = {Barbieri, Davide and Cardellini, Valeria and Filippone, Salvatore and Rouson, Damian},
+   title = {Design Patterns for Scientific Computations on Sparse Matrices},
+   booktitle = {Euro-Par 2011: Parallel Processing Workshops},
+   series = {LNCS},
+   publisher = {Springer},
+    pages = {367-376},
+   volume = {7155},
+   year = {2012}
+}
+
+@book{Duff:1986,
+ author = {Duff, Iain S and Erisman, Albert M and Reid, John K},
+ title = {Direct Methods for Sparse Matrices},
+ year = {1986},
+ isbn = {0-198-53408-6},
+ publisher = {Oxford University Press},
+} 
+
+@article{Markus:2008,
+ author = {Markus, Arjen},
+ title = "{Design patterns and Fortran 2003}",
+ journal = {SIGPLAN Fortran Forum},
+ volume = {27},
+ number = {3},
+ month = dec,
+ year = {2008},
+ issn = {1061-7264},
+ pages = {2--15},
+ numpages = {14},
+ doi = {10.1145/1462614.1462615},
+ acmid = {1462615},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+ url = {http://doi.acm.org/10.1145/1462614.1462615},
+
+@article{Blilie:2002,
+author = {Charles Blilie},
+title = {Patterns in Scientific Software: An Introduction},
+journal ={Computing in Science and Engineering},
+volume = {4},
+issn = {1521-9615},
+year = {2002},
+pages = {48-53},
+doi = {http://doi.ieeecomputersociety.org/10.1109/5992.998640},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+}
+
+@article{Rouson:2010,
+author = "Damian W. I. Rouson and Jim Xia and Xiaofeng Xu",
+title = "{Object construction and destruction design patterns in Fortran 2003}",
+journal = "Procedia Computer Science",
+volume = {1},
+number = {1},
+pages = {1495 - 1504},
+year = 2010,
+}
+
+@article{Markus:2006,
+ author = {Markus, Arjen},
+ title = "{Design patterns and Fortran 90/95}",
+ journal = {SIGPLAN Fortran Forum},
+ volume = {25},
+ number = {1},
+ month = apr,
+ year = {2006},
+ pages = {13--29},
+ publisher = {ACM},
+} 
+
+@book{GPUGems,
+  author = "Hwu, W. W.",
+  key = "GPUGems",
+  title = 	 "GPU Computing Gems Emerald Edition",
+  publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA}, 
+ year = 	 "2011",
+}
+
+@article{Exposito:2012,
+ author = {Exp\'osito, R. R. and Taboada, G. L. and Ramos, S. and Touri\~no, J. and Doallo, R.},
+ title = "{General-purpose computation on GPUs for high performance cloud computing}",
+ journal = CCPE,
+ volume = "25",
+ number = "12",
+ month = "August",
+ year = {2013},
+ pages = "1628--1642",
+ publisher = {Wiley},
+doi="10.1002/cpe.2845"
+} 
+
+@TechReport{ELL,
+  author = 	 {Grimes, R. and Kincaid, D. and Young, D.},
+  title = 	 "{ITPACK} 2.0 User's Guide",
+  institution =  "Center for Numerical Analysis, University of Texas",
+  year = 	 "1979",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  type = 	 "{CNA-150}",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  OPTnote = 	 "",
+}
+
+@misc{ForTrilinos,
+   author =   "{Sandia National Laboratories}",
+   key = "ForTrilinos",
+   title =   "{ForTrilinos}",
+   year = 2012,
+   note = "\url{http://trilinos.sandia.gov/packages/fortrilinos}"
+ }
+
+@book{AhHoUl:83,
+author="A. Aho and J. Hopcroft and J. Ullman",
+title="Data Structures and Algorithms",
+publisher="Addison--Wesley",
+address="Reading, MA",
+year = "1983"
+}
+
+
+@Book{Strou:2000,
+  author = 	 "Bjarne Stroustrup",
+  title = 	 "The {C++} Programming Language",
+  publisher = 	 "Addison-Wesley",
+  year = 	 "2000",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTeditor = 	 "",
+  OPTvolume = 	 "",
+  OPTnumber = 	 "",
+  OPTseries = 	 "",
+  address = 	 "Boston, MA",
+  edition = 	 "Special edition",
+  OPTmonth = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+@article{FLAME,
+year={2012},
+author={Bientinesi, Paolo and Gunnels, JohnA. and Myers, MargaretE. and Quintana-Ort\'{\i}, EnriqueS. and Rhodes, Tyler and Geijn, RobertA. and Van Zee, FieldG.},
+journal={Formal Aspects of Computing},
+title={Deriving dense linear algebra libraries},
+publisher={Springer-Verlag},
+}
+
+@article{FLAMEGPU,
+author = "Francisco D. Igual and Ernie Chan and Enrique S. Quintana-Ort\'{\i} and Gregorio Quintana-Ort\'{\i} and Robert A. van de Geijn and Field G. Van Zee",
+title = "The {FLAME} approach: From dense linear algebra algorithms to high-performance multi-accelerator implementations",
+journal = {J. Parallel Distrib. Comput.},
+ volume = {72},
+ number = {9},
+ month = sep,
+ pages = {1134--1143},
+year = {2012},
+}
+
+@inproceedings{Quintana:2009,
+ author = {Quintana-Ort\'{\i}, Gregorio and Igual, Francisco D. and Quintana-Ort\'{\i}, Enrique S. and van de Geijn, Robert A.},
+ title = {Solving dense linear systems on platforms with multiple hardware accelerators},
+ booktitle = {Proceedings of the 14th ACM SIGPLAN symposium on Principles and practice of parallel programming},
+ series = {PPoPP '09},
+ year = {2009},
+ isbn = {978-1-60558-397-6},
+ location = {Raleigh, NC, USA},
+ pages = {121--130},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/1504176.1504196},
+ doi = {10.1145/1504176.1504196},
+ acmid = {1504196},
+} 
+ publisher = {ACM},
+ address = {New York, NY, USA},
+
+@article{Gelado:2010,
+ author = {Gelado, Isaac and Stone, John E. and Cabezas, Javier and Patel, Sanjay and Navarro, Nacho and Hwu, Wen-mei W.},
+ title = {An asymmetric distributed shared memory model for heterogeneous parallel systems},
+ journal = {SIGARCH Comput. Archit. News},
+ volume = {38},
+ number = {1},
+ month = mar,
+ year = {2010},
+ pages = {347--358},
+ } 
+ 
+ @InProceedings{Minden:2010,
+  author = 	 "Minden, V. and Smith, B. and Knepley, M.G.", 
+  title = 	 "Preliminary Implementation of {PETSc} Using {GPUs}",
+  booktitle =  "Proc. of 2010 Int'l Workshop of GPU Solutions to Multiscale Problems in Science and Engineering",
+  year = 	 "2010",
+  pages = 	 "",
+  number = 	 "",
+  address = 	 "",
+  month = 	 "",
+  OPTnote = 	 "",
+  publisher = 	 "Springer Verlag"
+}
+ 
+ @INPROCEEDINGS{Gregg:2011, 
+author={Gregg, C. and Hazelwood, K.}, 
+booktitle={Proc. of 2011 IEEE Int'l Symp. on Performance Analysis of Systems and Software (ISPASS)}, 
+title="Where is the data? Why you cannot debate {CPU} vs. {GPU} performance without the answer", 
+year={2011}, 
+month=apr, 
+volume={}, 
+number={}, 
+pages={134--144}, 
+}
+
+@inproceedings{Pai:2012,
+ author = {Pai, Sreepathi and Govindarajan, R. and Thazhuthaveetil, Matthew J.},
+ title = "Fast and efficient automatic memory management for {GPU}s using compiler-assisted runtime coherence scheme",
+ booktitle = {Proc. of 21st Int'l Conf. on Parallel Architectures and Compilation Techniques},
+ series = {PACT '12},
+ year = {2012},
+ isbn = {978-1-4503-1182-3},
+ location = {Minneapolis, Minnesota, USA},
+ pages = {33--42},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/2370816.2370824},
+ doi = {10.1145/2370816.2370824},
+ acmid = {2370824},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {automatic, data transfers, gpu, memory management, software coherence},
+} 
+
+@book {CUDAbook,
+    AUTHOR = {Sanders, J. and Kandrot, E.},
+     TITLE = "{CUDA by example: An introduction to general-purpose GPU programming}",
+   EDITION = {First},
+ PUBLISHER = {Addison-Wesley}, 
+ address={Boston, MA, USA}, 
+      YEAR = {2010},
+}
+
+@article{Nickolls2008,
+ author = {Nickolls, J. and Buck, I. and Garland, M. and Skadron, K.},
+ title = "{Scalable parallel programming with CUDA}",
+ journal = {ACM Queue},
+ issue_date = {March/April 2008},
+ volume = {6},
+ issue = {2},
+ month = mar,
+ year = {2008},
+ issn = {1542-7730},
+ pages = {40--53},
+ numpages = {14},
+ publisher = {ACM},
+} 
+
+ 
+@ARTICLE{hest52,
+     AUTHOR = "M. R. Hestenes and E. Stiefel", 
+     TITLE = "Methods of conjugate gradients for solving linear systems",
+     JOURNAL = "J. Res. Natl. Bur. Stand.",
+     VOLUME = "49",
+     PAGES = "409--436",
+     YEAR = "1952"
+}
+ 
+
+@book {MR1990645,
+    AUTHOR = {Saad, Y.},
+     TITLE = {Iterative Methods for Sparse Linear Systems},
+   EDITION = {2nd},
+ PUBLISHER = {Society for Industrial and Applied Mathematics},
+   ADDRESS = {Philadelphia, PA},
+      YEAR = {2003},
+     PAGES = {xviii+528},
+      ISBN = {0--89871--534--2},
+   MRCLASS = {65-01 (65F10 65F50)},
+  MRNUMBER = {MR1990645 (2004h:65002)},
+MRREVIEWER = {Arnold Reusken},
+}
+
+@article{Pichel:2012,
+author = "Pichel, J. C. and Rivera, F. F.  and Fern\'andez, M. and  Rodr\'iguez, A.",
+title = "{Optimization of sparse matrix-vector multiplication using reordering techniques on GPUs}",
+journal = "Microprocess. Microsyst.",
+volume = "36",
+number = "2",
+pages = "65--77",
+year = "2012",
+}
+ month = mar,
+
+@incollection {Monakov2010,
+   author = {Monakov, A. and Lokhmotov, A. and Avetisyan, A.},
+   title = "{Automatically tuning sparse matrix-vector multiplication for GPU architectures}",
+   booktitle = {High Performance Embedded Architectures and Compilers},
+   series = {LNCS},
+ publisher = {Springer-Verlag},
+ pages = {111-125},
+   volume = {5952},
+   year = {2010}
+}
+ address = {Berlin, Heidelberg},   
+
+@misc{ELLPACK,
+   author =   "Kincaid, D. R and Oppe, T. C. and Young, D. M.",
+   title =   "{ITPACKV 2D User's Guide}",
+       type = 	 "{CNA- 232 1989}",
+       year = 1989,
+       month = may,
+   note = "\url{http://rene.ma.utexas.edu/CNA/ITPACK/manuals/userv2d/}" } 
+
+@article{Dziekonski:2011,
+   title="A Memory Efficient and Fast Sparse Matrix Vector Product on a {GPU}",
+   author={Dziekonski, A. and Lamecki, A. and Mrozowski, M.},
+   journal={Progress in Electromagnetics Research},
+   volume={116},
+   pages={49--63},
+   year={2011},
+   publisher={EMW Publishing},
+}
+
+@Article{BryLei:06,
+  author = 	 "Bryan, Kurt and Leise, Tanya",
+  title = 	 "The \$25,000,000,000 Eigenvector: The Linera Algebra behind {Google}",  
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  journal = 	 "SIAM Review",
+  year = 	 "2006",
+  volume = 	 "48",
+  number = 	 "3",
+  pages = 	 "569--581",
+  month = 	 "",
+  OPTnote = 	 "",
+  OPTannote = 	 ""
+}
+
+
+@book{QuVa:94,
+    AUTHOR = {Quarteroni, A. and Valli, A.},
+     TITLE = {Numerical Approximation of Partial Differential Equations},
+ PUBLISHER = {Springer-Verlag},
+   ADDRESS = {Berlin},
+      YEAR = {1994}
+}
+
+@book{LeVeque:07,
+    AUTHOR = {LeVeque, Randall J.},
+     TITLE = {Finite Difference Methods for Ordinary and Partial Differential Equations},
+ PUBLISHER = {SIAM},
+   ADDRESS = {Philadelphia, PA},
+      YEAR = {2007}
+}
+
+@book{patankar,
+  author =	 "Patankar, S. V.",
+  title =	 "Numerical Heat Transfer and Fluid Flow",
+  edition =	 "First",
+  series =	 "Series in Computational Methods in Mechanics and
+                  Thermal Sciences",
+   publisher = {Hemisphere Publishing Corp.}, 
+   address = {NY}, 
+  year =	 1980
+}
+   address = {New York, NY, USA}, 
+
+@article{CaFiRo:2014,
+ author = {Cardellini, Valeria and Filippone, Ssalvatore and Rouson, Damian},
+ title ="Design patterns for sparse-matrix computations on hybrid {CPU/GPU} platforms",
+ journal = SCIPROG,
+ volume="22",
+ number = "1",
+ year = {2014},
+ pages = "1--19", 
+}
+
+@article{Dang:2013,
+author = {Dang, H.-V.  and  Schmidt, B.},
+title = "{CUDA}-enabled Sparse Matrix-Vector Multiplication on {GPUs} using atomic operations",
+journal =PARCO,
+volume = "39",
+number = "11",
+pages = "737--750",
+year = "2013",
+note = "",
+issn = "0167-8191",
+}
+doi = "http://dx.doi.org/10.1016/j.parco.2013.09.005",
+url = "http://www.sciencedirect.com/science/article/pii/S0167819113001178",
+
+@inproceedings{Kreutzer2012,
+ author = {Kreutzer, M. and Hager, G. and Wellein, G. and Fehske, H. and Basermann, A. and Bishop, A. R.},
+ title = "Sparse Matrix-vector Multiplication on {GPGPU} Clusters: A New Storage Format and a Scalable Implementation",
+ booktitle = {Proc. of  26th IEEE Int'l Parallel and Distributed Processing Symposium Workshops \& PhD Forum},
+ series = {IPDPSW '12},
+ year = {2012},
+ isbn = {978-0-7695-4676-6},
+ pages = {1696--1702},
+ numpages = {7},
+ acmid = {2357678},
+ keywords = {GPGPU, Sparse matrices, CUDA},
+} 
+ url = {http://dx.doi.org/10.1109/IPDPSW.2012.211},
+ doi = {10.1109/IPDPSW.2012.211},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@Article{Davis:2011:UFS,
+  author =       {Davis, T. A. and Hu, Y.},
+  title =        "{The University of Florida Sparse Matrix Collection}",
+  journal =    ACMTMS,
+  volume =       "38",
+  number =       "1",
+  pages =        "1:1--1:25",
+  year =         "2011",
+}
+  URL =          "http://doi.acm.org/10.1145/2049662.2049663",
+  month =        nov,
+
+@inproceedings{Liu:2013:ESM,
+ author = {Liu, Xing and Smelyanskiy, Mikhail and Chow, Edmond and Dubey, Pradeep},
+ title = {Efficient Sparse Matrix-vector Multiplication on x86-based Many-core Processors},
+ booktitle = {Proc. of 27th Int'l ACM Conf. on Supercomputing},
+ series = {ICS '13},
+ year = {2013},
+ isbn = {978-1-4503-2130-3},
+ location = {Eugene, Oregon, USA},
+ pages = {273--282},
+ numpages = {10},
+ acmid = {2465013},
+ keywords = {esb format, intel many integrated core architecture (intel mic), intel xeon phi, knights corner, spmv},
+} 
+ url = {http://doi.acm.org/10.1145/2464996.2465013},
+ doi = {10.1145/2464996.2465013},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+
+@incollection{Mukunoki:2013, 
+author={Mukunoki, D. and Takahashi, D.},
+title="{Optimization of sparse matrix-vector multiplication for CRS format on NVIDIA Kepler architecture GPUs}",
+year={2013},
+isbn={978-3-642-39639-7},
+booktitle={Computational Science and Its Applications}, 
+series = {LNCS},
+publisher = {Springer}, 
+volume={7975},
+keywords={sparse matrix-vector multiplication; SpMV; Kepler architecture; GPU; CUDA},
+pages={211--223},
+}
+ address = {Berlin, Heidelberg}, 
+editor={Murgante, Beniamino and Misra, Sanjay and Carlini, Maurizio and Torre, CarmeloM. and Nguyen, Hong-Quang and Taniar, David and Apduhan, BernadyO. and Gervasi, Osvaldo},
+doi={10.1007/978-3-642-39640-3_15},
+url={http://dx.doi.org/10.1007/978-3-642-39640-3_15},
+
+@INPROCEEDINGS{Shah:2012, 
+author={Shah, M. and Patel, V.}, 
+title="An Efficient Sparse Matrix Multiplication for Skewed Matrix on {GPU}", 
+booktitle={Proc. of  14th IEEE Int'l Conf. on High Performance Comput. and Comm.}, 
+year={2012}, 
+month=jun, 
+pages={1301--1306}, 
+keywords={concurrency control;graphics processing units;mathematics computing;matrix multiplication;parallel programming;performance evaluation;resource allocation;sparse matrices;vectors;ALIGNED_COO sparse format;GPU;SpMV kernel;computing resources;coordinate format;large sparse matrix performance optimization;load balancing;performance gain;performance improvement;power-law distribution;power-law graph;skewed matrix;sparse matrix format;sparse matrix patterns;sparse matrix vector multiplication;synchronization free distribution;work load alignment;Graphics processing unit;Indexes;Instruction sets;Kernel;Load management;Sparse matrices;Vectors;Load balance;Power-law graph;SpMV}, 
+}
+booktitle={Proc. of  14th IEEE Int'l Conf. on High Performance Computing and Communication}, 
+doi={10.1109/HPCC.2012.192},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@article{Feng:2014:CPE,
+author = {Feng, X. and Jin, H. and Zheng, R. and Shao, Z. and Zhu, L.},
+title = "A segment-based sparse matrix vector multiplication on {CUDA}",
+journal = CCPE,
+volume = {26},
+number = {1},
+issn = {1532-0634},
+pages = {271--286},
+keywords = {GPU, sparse matrix vector multiplication, hybrid, interleaved combination, segmentation, memory footprint},
+year = {2014},
+}
+url = {http://dx.doi.org/10.1002/cpe.2978},
+doi = {10.1002/cpe.2978},
+
+@INPROCEEDINGS{Maringanti:2009, 
+author={Maringanti, A. and Athavale, V. and Patkar, S. B.}, 
+booktitle={Proc. of 2009 Int'l Conf. on High Performance Computing}, 
+series = {HiPC '09}, 
+title="Acceleration of conjugate gradient method for circuit simulation using {CUDA}", 
+year={2009}, 
+month=dec, 
+pages={438--444}, 
+  publisher = {IEEE},
+keywords={circuit simulation;computer graphics;coprocessors;gradient methods;CUDA technology;DC analyser;Nvidia GTX 280 GPU;circuit simulation;compute unified device architecture;conjugate gradient method;graphics cards;graphics processing unit;Acceleration;Analytical models;Circuit analysis;Circuit simulation;Equations;Gradient methods;Graphics;Iterative methods;Power generation;Voltage}, 
+}
+ address = {Piscataway, NJ, USA},
+doi={10.1109/HIPC.2009.5433184},
+
+@article{Neelima:2012:SCPE,
+author = {Neelima, B. and Prakash, S. R. and Reddy, Ram Mohana},
+title = "New Sparse Matrix Storage Format to Improve The Performance of Total {SpMV} Time",
+journal = SCPE,
+volume = {13},
+number = {2},
+pages = {159--171},
+year = {2012}, 
+}
+month = jun,
+
+@INPROCEEDINGS{Matam:2011:ICPP, 
+author={Matam, K.K. and Kothapalli, K.}, 
+booktitle={Proc. of 40th Int'l Conf. on Parallel Processing}, 
+series = {ICPP '11},  
+title="Accelerating Sparse Matrix Vector Multiplication in Iterative Methods Using {GPU}", 
+year={2011}, 
+month=sep, 
+pages={612--621}, 
+ publisher = {IEEE Computer Society},
+keywords={computer graphic equipment;coprocessors;iterative methods;mathematics computing;matrix multiplication;Nvidia Tesla GPU;data structure;graphics processing unit;iterative method;linear algebra kernel;sparse matrix vector multiplication;Data structures;Graphics processing unit;Instruction sets;Kernel;Optimization;Sparse matrices;GPGPU;Iterative Methods;Sparse Matrix Vector Multiplication}, 
+ ISSN={0190-3918},
+ }
+doi={10.1109/ICPP.2011.82},
+ address = {Washington, DC, USA},
+
+@article{Vazquez:2012,
+author = "V\'{a}zquez, F. and Fern\'{a}ndez, J.J. and Garz\'{o}n, E. M.",
+title = "Automatic tuning of the sparse matrix vector product on {GPUs} based on the {ELLR-T} approach",
+journal = PARCO,
+volume = "38",
+number = "8",
+pages = "408--420",
+year = "2012",
+issn = "0167-8191",
+}
+doi = "http://dx.doi.org/10.1016/j.parco.2011.08.003",
+url = "http://www.sciencedirect.com/science/article/pii/S0167819111001050",
+note = "\{APPLICATION\} \{ACCELERATORS\} \{IN\} \{HPC\} ",
+
+@inproceedings{Tang:2013,
+ author = {Tang, Wai Teng and Tan, Wen Jun and Ray, Rajarshi and Wong, Yi Wen and Chen, Weiguang and Kuo, Shyh-hao and Goh, Rick Siow Mong and Turner, Stephen John and Wong, Weng-Fai},
+ title = "Accelerating Sparse Matrix-vector Multiplication on {GPU}s Using Bit-representation-optimized Schemes",
+ booktitle = {Proc. of Int'l Conference for High Performance Computing, Networking, Storage and Analysis},
+ series = {SC '13},
+ year = {2013},
+ isbn = {978-1-4503-2378-9},
+ location = {Denver, Colorado},
+ pages = {26:1--26:12},
+ articleno = {26},
+ numpages = {12},
+ acmid = {2503234},
+ publisher = {ACM},
+ keywords = {GPU, compression, data compression, matrix-vector multiplication, memory bandwidth, parallelism, sparse matrix format},
+} 
+ url = {http://doi.acm.org/10.1145/2503210.2503234},
+ doi = {10.1145/2503210.2503234},
+ address = {New York, NY, USA},
+
+@inproceedings{Yan:2014,
+ author = {Yan, S. and Li, C.  and  Zhang, Y. and Zhou, H.},
+ title = "{yaSpMV: yet another SpMV framework on GPUs}",
+ booktitle = {Proc. of 19th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+ series = {PPoPP '14},
+ year = {2014},
+ month = feb,
+ pages={107--118},
+} 
+ publisher = {ACM},
+ address = {New York, NY, USA},
+
+@inproceedings{Godwin:2012,
+ author = {Godwin, Jeswin and Holewinski, Justin and Sadayappan, P.},
+ title = "High-performance Sparse Matrix-vector Multiplication on {GPUs} for Structured Grid Computations",
+ booktitle = {Proc. of the 5th Annual Workshop on General Purpose Processing with Graphics Processing Units},
+ series = {GPGPU-5},
+ year = {2012},
+ isbn = {978-1-4503-1233-2},
+ location = {London, United Kingdom},
+ pages = {47--56},
+ numpages = {10},
+ acmid = {2159436},
+ publisher = {ACM},
+} 
+ url = {http://doi.acm.org/10.1145/2159430.2159436},
+ doi = {10.1145/2159430.2159436},
+ address = {New York, NY, USA},
+
+@inproceedings{Liu:2013,
+author = {Lifeng Liu and Meilin Liu and Chong-Jun Wang},
+title = "{An optimized GP-GPU warp scheduling algorithm for sparse matrix-vector multiplication}",
+booktitle ={Proc. of 2013 IEEE 8th Int'l Conf. on Networking, Architecture and Storage}, 
+series = {NAS '13},
+year = {2013},
+pages = {222-231},
+}
+doi = {http://doi.ieeecomputersociety.org/10.1109/NAS.2013.35},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+
+@inproceedings{Feng:2011,
+author = {Feng, X. and  Jin, H. and  Zheng, R. and  Hu, K. and  Zeng, J. and  Shao, Z.},
+title = "Optimization of sparse matrix-vector multiplication with variant {CSR on GPUs}",
+booktitle ={Proc. of 17th Int'l Conf. on Parallel and Distributed Systems},
+series = {ICPADS '11},
+year = {2011},
+pages = {165-172},
+publisher = {IEEE Computer Society},
+}
+doi = {http://doi.ieeecomputersociety.org/10.1109/ICPADS.2011.91},
+address = {Los Alamitos, CA, USA},
+
+@INPROCEEDINGS{Maggioni:2013:ICPP, 
+author={Maggioni, M. and Berger-Wolf, T.}, 
+booktitle={Proc. of 42nd Int'l Conf. on Parallel Processing}, 
+series = {ICPP '13}, 
+title="{AdELL}: An Adaptive Warp-Balancing {ELL} Format for Efficient Sparse Matrix-Vector Multiplication on {GPU}s", 
+year={2013}, 
+month=oct, 
+pages={11--20}, 
+ publisher = {IEEE Computer Society},
+ISSN={0190-3918},}
+doi={10.1109/ICPP.2013.10}, 
+ address = {Washington, DC, USA},
+
+@INPROCEEDINGS{Maggioni:2013:IPDPSW, 
+author={Maggioni, M. and Berger-Wolf, T. and Jie Liang}, 
+booktitle={Proc. of IEEE 27th Int'l Parallel and Distributed Processing Symposium Workshops \& PhD Forum}, 
+series = {IPDPSW '13}, 
+title="{GPU}-Based Steady-State Solution of the Chemical Master Equation", 
+year={2013}, 
+month=may, 
+pages={579-588}, 
+doi={10.1109/IPDPSW.2013.271},}
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ 
+@inproceedings{Keutzer:2012, 
+author = {Bor-Yiing Su and Kurt Keutzer}, 
+title = "{clSpMV: a cross-platform OpenCL SpMV framework on GPUs}",
+booktitle = {Proc. of 26th ACM Int'l Conf. on Supercomputing},
+series = {ICS '12},
+pages = {353--364},
+year = {2012}, 
+location = {Venice, Italy}, }
+publisher = {ACM},
+ address = {New York, NY, USA},
+
+@misc{Colella,
+   author =   "Colella, P",
+   title =   {Defining Software Requirements for Scientific Computing},
+   year = 2004,
+   note = "\url{http://view.eecs.berkeley.edu/w/images/temp/6/6e/20061003235551!DARPAHPCS.ppt}",    }
+   
+@article{Williams:2009,
+ author = {Williams, S. and Waterman, A. and Patterson, D.},
+ title = {Roofline: An Insightful Visual Performance Model for Multicore Architectures},
+ journal = {Commun. ACM},
+ volume = {52},
+ number = {4},
+ year = {2009},
+ issn = {0001-0782},
+ pages = {65--76},
+ numpages = {12},
+ doi = {10.1145/1498765.1498785},
+ acmid = {1498785},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+ url = {http://doi.acm.org/10.1145/1498765.1498785},
+ month = apr,
+
+@article{Yang:2011,
+ author = {Yang, Xintian and Parthasarathy, Srinivasan and Sadayappan, P.},
+ title = "Fast Sparse Matrix-vector Multiplication on {GPU}s: Implications for Graph Mining",
+ journal = {Proc. VLDB Endow.},
+ volume = {4},
+ number = {4},
+ year = {2011},
+ issn = {2150-8097},
+ pages = {231--242},
+ numpages = {12},
+ acmid = {1938548},
+ publisher = {VLDB Endowment},
+} 
+ url = {http://dl.acm.org/citation.cfm?id=1938545.1938548},
+ month = jan,
+
+@article{Oberhuber:2011,
+  author    = {Tom{\'a}s Oberhuber and Atsushi Suzuki and Jan Vacata},
+  title     = "{New row-grouped CSR format for storing the sparse matrices
+               on GPU with implementation in CUDA}",
+  journal   = {Acta Technica},
+  volume    = {56},
+  year      = {2011},
+  pages = {447-466}, }
+
+@article{Dehnavi:2010, 
+author={Dehnavi, M.M. and Fernandez, D.M. and Giannacopoulos, D.}, 
+journal={IEEE Trans. Magnetics}, 
+title={Finite-Element Sparse Matrix Vector Multiplication on Graphic Processing Units}, 
+year={2010}, 
+volume={46}, 
+number={8}, 
+pages={2982-2985}, 
+ISSN={0018-9464},}
+doi={10.1109/TMAG.2010.2043511}, 
+month=aug, 
+
+@INPROCEEDINGS{Wang:2010:ICETC, 
+author={Zhuowei Wang and Xianbin Xu and Wuqing Zhao and Yuping Zhang and Shuibing He}, 
+booktitle={Proc. of  2nd Int'l Conf. on Education Technology and Computer}, 
+series = {ICETC '10},  
+title="Optimizing sparse matrix-vector multiplication on {CUDA}", 
+year={2010}, 
+month=jun, 
+volume={4}, 
+pages={109--113}, 
+publisher={IEEE},
+}
+doi={10.1109/ICETC.2010.5529724},
+ address = {Piscataway, NJ, USA},
+
+@INPROCEEDINGS{Shan:2010, 
+author={Yi Shan and Tianji Wu and Yu Wang and Bo Wang and Zilong Wang and Ningyi Xu and Huazhong Yang}, 
+booktitle={Proc. of IEEE 8th Symposium on Application Specific Processors}, 
+series = {SASP '10}, 
+title="{FPGA and GPU implementation of large scale SpMV}", 
+year={2010}, 
+month=jun, 
+pages={64-70}, 
+keywords={computer graphic equipment;coprocessors;field programmable gate arrays;sparse matrices;task analysis;vectors;FPGA implementation;GPU implementation;access pattern;compressed sparse row format;large scale SpMV;memory hierarchy;sparse matrix-vector multiplication;task partition;very large scale datasets;web link graph analysis;Acceleration;Concurrent computing;Couplings;Field programmable gate arrays;Hardware;High performance computing;Large-scale systems;Parallel processing;Processor scheduling;Sparse matrices;AMD GPU;FPGA;SpMV;component;memory hierachy}, 
+}
+doi={10.1109/SASP.2010.5521144},
+
+@INPROCEEDINGS{Guo:2010, 
+author={Ping Guo and Liqiang Wang}, 
+booktitle={Proc. of 2010 Int'l. Conf. on Computational and Information Sciences}, 
+series = {ICCIS '10},  
+title="{Auto-tuning CUDA parameters for sparse matrix-vector multiplication on GPUs}", 
+year={2010}, 
+month=dec, 
+pages={1154-1157}, 
+ publisher = {IEEE Computer Society},
+keywords={coprocessors;matrix multiplication;sparse matrices;tuning;GeForce 9500 GTX;GeForce GTX 295;NVIDIA GPU platforms;SpMV;auto-tuning CUDA parameters;auto-tuning framework;coprocessor;graphics processing unit;sparse matrix-vector multiplication;Finite element methods;Graphics processing unit;Instruction sets;Kernel;Performance evaluation;Sparse matrices;Tuning;CUDA;GPU;performance;sparse matrix-vector multiplication}, }
+doi={10.1109/ICCIS.2010.285},
+ address = {Washington, DC, USA},
+
+@inproceedings{Guo:2011:MPA,
+ author = {Guo, Ping and Huang, He and Chen, Qichang and Wang, Liqiang and Lee, En-Jui and Chen, Po},
+ title = {A Model-driven Partitioning and Auto-tuning Integrated Framework for Sparse Matrix-vector Multiplication on GPUs},
+ booktitle = {Proc. of 2011 TeraGrid Conference: Extreme Digital Discovery},
+ series = {TG '11},
+ year = {2011},
+ isbn = {978-1-4503-0888-5},
+ location = {Salt Lake City, Utah},
+ pages = {2:1--2:8},
+ articleno = {2},
+ numpages = {8},
+ acmid = {2016744},
+ publisher = {ACM},
+ keywords = {GPU, auto-tuning, performance modeling, sparse matrix-vector multiplication},
+ address = {New York, NY, USA},
+} 
+ url = {http://doi.acm.org/10.1145/2016741.2016744},
+ doi = {10.1145/2016741.2016744},
+ 
+@article{Guo:TPDS, 
+author={Guo, P. and Wang, L. and Chen, P.}, 
+journal=TPDS, 
+title="A Performance Modeling and Optimization Analysis Tool for Sparse Matrix-Vector Multiplication on {GPUs}", 
+year={2014}, 
+volume={25}, 
+number={5}, 
+pages={1112-1123},
+keywords={Algorithms;CUDA;Computer;Computer Systems Organization;GPU;General;Mathematics of Computing;Measurement;Modeling and prediction;Modeling techniques;Multiple Data Stream Architectures (Multiprocessors);Numerical Analysis;Numerical Linear Algebra;Operating Systems;Parallel algorithms;Performance;Performance evaluation of algorithms and systems;Performance of Systems;Processor Architectures;SIMD processors;Software/Software Engineering;Sparse;Sparse Matrix-vector Multiplication;Symbolic and algebraic manipulation;and very large systems;evaluation;modeling;simulation of multiple-processor systems;structured}, 
+doi={10.1109/TPDS.2013.123}, 
+ISSN={1045-9219},
+}
+month=may, 
+
+@article {Guo:2014:CCPE,
+author = {Guo, Ping and Wang, Liqiang},
+title = "{Accurate cross-architecture performance modeling for sparse matrix-vector multiplication (SpMV) on GPUs}",
+journal = CCPE,
+issn = {1532-0634},
+doi = {10.1002/cpe.3217},
+volume={27}, 
+number={13}, 
+pages={3281-3294},
+keywords = {performance modeling, sparse matrix-vector multiplication, GPU, CUDA},
+year = {2015},
+}
+
+@INPROCEEDINGS{Abu-Sufah:2012, 
+author={Abu-Sufah, W. and Abdel-Karim, A.},
+booktitle={Proc. of 14th IEEE Int'l Conf. on High Performance Computing and Communication}, 
+series = {HPCC '12},  
+title={An Effective Approach for Implementing Sparse Matrix-Vector Multiplication on Graphics Processing Units}, 
+year={2012}, 
+month=jun, 
+pages={453-460}, 
+keywords={graphics processing units;iterative methods;matrix multiplication;optimisation;parallel architectures;sparse matrices;BTJAD storage format;Fermi class GeForce GTX480 GPU;NVIDIA Tesla T10;SpMV kernel;graphics processing unit;iterative solver;optimization;sparse matrix vector multiplication;sparsity pattern;transposed jagged diagonal storage format;Graphics processing unit;Instruction sets;Kernel;Optimization;Registers;Sparse matrices;Vectors;CUDA;GPU;SpMV;sparse linear algebra}, 
+}
+doi={10.1109/HPCC.2012.68},
+address = {Washington, DC, USA},
+publisher = {IEEE Computer Society},
+
+@incollection{Abu-Sufah:2013, 
+author={Abu-Sufah, W. and Abdel-Karim, A.},
+year={2013},
+isbn={978-3-642-38749-4},
+booktitle={Supercomputing},
+volume={7905},
+series={LNCS},
+title={Auto-tuning of Sparse Matrix-Vector Multiplication on Graphics Processors},
+publisher = {Springer-Verlag},
+ keywords={SpMV; GPUs; Auto-tuning; sparse linear algebra; CUDA},
+pages={151-164},
+}
+doi={10.1007/978-3-642-38750-0_12},
+url={http://dx.doi.org/10.1007/978-3-642-38750-0_12},
+editor={Kunkel, JulianMartin and Ludwig, Thomas and Meuer, HansWerner},
+ address = {Berlin, Heidelberg}, 
+
+@INPROCEEDINGS{Xu:2012, 
+author={Weizhi Xu and Hao Zhang and Shuai Jiao and Da Wang and Fenglong Song and Zhiyong Liu}, 
+booktitle={Proc. of 13th ACIS Int'l Conf. on Software Engineering, Artificial Intelligence, Networking and Parallel Distributed Computing}, 
+series =  {SNPD '12},
+title="Optimizing Sparse Matrix Vector Multiplication Using Cache Blocking Method on {Fermi GPU}", 
+year={2012}, 
+month=aug, 
+pages={231-235}, 
+ publisher = {IEEE Computer Society},
+doi={10.1109/SNPD.2012.20},}
+ address = {Washington, DC, USA},
+
+@article{ElZein:2012,
+author = {El Zein, Ahmed H. and Rendell, Alistair P.},
+title = "Generating optimal {CUDA} sparse matrix vector product implementations for evolving {GPU} hardware",
+journal = CCPE,
+volume = {24},
+number = {1},
+issn = {1532-0634},
+pages = {3--13},
+year = {2012},
+}
+url = {http://dx.doi.org/10.1002/cpe.1732},
+doi = {10.1002/cpe.1732},
+publisher = {John Wiley & Sons, Ltd},
+
+@inproceedings{ElZein:2010,
+ author = {El Zein, Ahmed H. and Rendell, Alistair P.},
+ title = {From Sparse Matrix to Optimal GPU CUDA Sparse Matrix Vector Product Implementation},
+ booktitle = {Proceedings of the 2010 10th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing},
+ series = {CCGRID '10},
+ year = {2010},
+ isbn = {978-0-7695-4039-9},
+ pages = {808--813},
+ numpages = {6},
+ url = {http://dx.doi.org/10.1109/CCGRID.2010.81},
+ doi = {10.1109/CCGRID.2010.81},
+ acmid = {1845136},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {spmv, GPU, GPU, Sparse Matrix},
+} 
+
+@INPROCEEDINGS{Xu:2010, 
+author={Shiming Xu and Hai Xiang Lin and Wei Xue}, 
+booktitle={Proc. of 9th Int'l Symposium on Distributed Computing and Applications to Business Engineering and Science}, 
+series = {DCABES '10}, 
+title="Sparse Matrix-Vector Multiplication Optimizations based on Matrix Bandwidth Reduction using {NVIDIA CUDA}", 
+year={2010}, 
+month=aug, 
+pages={609-614}, 
+keywords={mathematics computing;matrix multiplication;operating system kernels;optimisation;parallel architectures;sparse matrices;vectors;ELLPACK format;NVIDIA CUDA;SpMV computation;matrix bandwidth reduction;register blocking;sparse matrix vector multiplication optimizations;Bandwidth;Finite element methods;Indexes;Instruction sets;Optimization;Proteins;Sparse matrices}, 
+}
+doi={10.1109/DCABES.2010.162},
+
+@INPROCEEDINGS{Yuan:2010, 
+author={Liang Yuan and Yunquan Zhang and Xiangzheng Sun and Ting Wang}, 
+booktitle={Proc. of 12th IEEE Int'l Conf. on High Performance Computing and Communications}, 
+series = {HPCC '10},
+title={Optimizing Sparse Matrix Vector Multiplication Using Diagonal Storage Matrix Format}, 
+year={2010}, 
+month=sep, 
+pages={585-590}, 
+doi={10.1109/HPCC.2010.67},}
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@article{Li:TPDS, 
+author={Li, K. and Yang, W. and Li, K.}, 
+journal=TPDS, 
+title="{Performance analysis and optimization for SpMV on GPU using probabilistic modeling}", 
+year={2015}, 
+volume={26}, 
+number={1}, 
+pages={196-205}, 
+keywords={Arrays;Graphics processing units;Instruction sets;Performance analysis;Silicon;Sparse matrices;Vectors}, 
+doi={10.1109/TPDS.2014.2308221}, 
+ISSN={1045-9219},
+}
+month=jan, 
+
+@article{Zheng:2014,
+title = "{BiELL: A bisection ELLPACK based storage format for optimizing SpMV on GPUs}",
+journal = JPDC,
+volume = {74},
+number = {7},
+pages = {2639-2647},
+year = {2014},
+issn = "0743-7315",
+doi = {10.1016/j.jpdc.2014.03.002}, 
+author = "Cong Zheng and Shuo Gu and Tong-Xiang Gu and Bing Yang and Xing-Ping Liu",
+}
+url = "http://www.sciencedirect.com/science/article/pii/S0743731514000458",
+
+@TechReport{EESINUMLIB, 
+  author = 	 "{EESI Working Group 4.3}",
+  title = 	 "Working Group Report on Numerical Libraries, Solvers and Algorithms",
+  institution =  "European Exascale Software Initiative",
+  year = 	 "2011",
+  OPTcrossref =  "",
+  OPTkey = 	 "",
+  OPTtype = 	 "",
+  OPTnumber = 	 "",
+  OPTaddress = 	 "",
+  OPTnote = 	 "",
+  note = 	 "\url{http://www.eesi-project.eu/}"
+}
+  month = 	dec,
+
+@inproceedings{Grewe:2011,
+ author = {Grewe, Dominik and Lokhmotov, Anton},
+ title = "Automatically Generating and Tuning {GPU} Code for Sparse Matrix-vector Multiplication from a High-level Representation",
+ booktitle = {Proc. of 4th Workshop on General Purpose Processing on Graphics Processing Units},
+ series = {GPGPU-4},
+ year = {2011},
+ isbn = {978-1-4503-0569-3},
+ location = {Newport Beach, California},
+ pages = {12:1--12:8},
+ articleno = {12},
+ numpages = {8},
+ acmid = {1964196},
+ publisher = {ACM},
+} 
+ doi = {10.1145/1964179.1964196},
+ address = {New York, NY, USA},
+ 
+@ARTICLE{Yzelman:2014, 
+author={Yzelman, A.-J.N. and Roose, D.}, 
+journal=TPDS, 
+title={High-Level Strategies for Parallel Shared-Memory Sparse Matrix-Vector Multiplication}, 
+year={2014}, 
+month={Jan}, 
+volume={25}, 
+number={1}, 
+pages={116-125}, 
+keywords={cache storage;matrix multiplication;parallel architectures;parallel memories;shared memory systems;sparse matrices;NUMA architectures;arithmetic intensity;cache use;computational kernel;high-level strategies;memory bandwidth;memory usage;parallel efficiency;parallel shared memory;parallelization techniques;shared-memory parallel architectures;sparse matrix-vector multiplication;Bandwidth;Computer architecture;Indexes;Kernel;Particle separators;Sparse matrices;Vectors;Hilbert space-filling curve;NUMA architectures;Sparse matrix-vector multiplication;cache-oblivious;high-performance computing;matrix reordering;shared-memory parallelism;sparse matrix partitioning}, 
+doi={10.1109/TPDS.2013.31}, 
+ISSN={1045-9219},}
+
+@ARTICLE{Karakasis:2014, 
+author={Karakasis, V. and Gkountouvas, T. and Kourtis, K. and Goumas, G. and Koziris, N.}, 
+journal=TPDS, 
+title={An Extended Compression Format for the Optimization of Sparse Matrix-Vector Multiplication}, 
+year={2013}, 
+month={Oct}, 
+volume={24}, 
+number={10}, 
+pages={1930-1940}, 
+keywords={data compression;indexing;information retrieval;matrix multiplication;optimisation;sparse matrices;storage management;CSX;NUMA systems;SMP architecture;aggressive compression technique;compressed sparse extended;extended storage compression format;memory subsystem;multiphysics simulation software;nonzero element structure;optimization;sparse matrix indexing structure;sparse matrix vector multiplication;standard CSR format;substructure detection;substructure encoding;Computer architecture;Encoding;Indexes;Kernel;Optimization;Sparse matrices;Vectors;Sparse Matrix-Vector Multiplication;data compression;multicore optimizations}, 
+doi={10.1109/TPDS.2012.290}, 
+ISSN={1045-9219},}
+
+@incollection{Kubota:2011, 
+year={2011},
+isbn={978-3-642-21886-6},
+booktitle={Computational Science and Its Applications - ICCSA 2011},
+volume={6783},
+series={LNCS},
+title="Optimization of Sparse Matrix-Vector Multiplication by Auto Selecting Storage Schemes on {GPU}",
+keywords={sparse matrix; storage scheme; auto-tuning; GPU},
+author={Kubota, Yuji and Takahashi, Daisuke},
+pages={547-561}, 
+publisher={Springer},
+}
+doi={10.1007/978-3-642-21887-3_42},
+editor={Murgante, Beniamino and Gervasi, Osvaldo and Iglesias, Andrés and Taniar, David and Apduhan, BernadyO.},
+ address = {Berlin, Heidelberg},
+
+@INPROCEEDINGS{Yoshizawa:2012, 
+author={Yoshizawa, H. and Takahashi, D.}, 
+booktitle={Proc. of IEEE 15th Int'l Conf. on Computational Science and Engineering}, 
+series = {CSE '12},  
+title="{Automatic tuning of sparse matrix-vector multiplication for CRS format on GPUs}", 
+year={2012}, 
+month=dec, 
+pages={130-136}, 
+keywords={approximation theory;conjugate gradient methods;graphics processing units;matrix multiplication;sparse matrices;vectors;CRS format;GPU;automatic optimal parameter selection;automatic sparse matrix-vector multiplication tuning;compressed row storage format;computing environment;conjugate gradient method;iterative method;kernel SpMV optimization;linear equations;Acceleration;Graphics processing units;Instruction sets;Iterative methods;Kernel;Sparse matrices;Vectors;CG;CRS;CUDA;GPGPU;SpMV}, }
+doi={10.1109/ICCSE.2012.28},
+publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@INPROCEEDINGS{Kothapalli:2013, 
+author={Indarapu, Sivaramakrisha Bharadwaj  and Maramreddy, Manoj and Kothapalli, Kishore}, 
+booktitle={Proc. of 19th IEEE Int'l Conf. on Parallel and Distributed Systems}, 
+series = {ICPADS '13},
+title={Architecture- and Workload- Aware Heterogeneous Algorithms for Sparse Matrix Vector Multiplication}, 
+year={2013}, 
+month=dec, 
+pages={}, }
+publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@inproceedings{GuoGropp:2012,
+ author = {Guo, Dahai and Gropp, William},
+ title = "{Adaptive thread distributions for SpMV on a GPU}",
+ booktitle = {Proc. of Extreme Scaling Workshop},
+ series = {BW-XSEDE '12},
+ year = {2012},
+ location = {Chicago, Illinois},
+ pages = {2:1--2:5},
+ articleno = {2},
+ numpages = {5},
+ acmid = {2462079},
+ keywords = {AUTOCSR, GPU, SpMV, adaptive TPR},
+ publisher = {University of Illinois at Urbana-Champaign},
+ address = {Champaign, IL},
+} 
+ url = {http://dl.acm.org/citation.cfm?id=2462077.2462079},
+
+@INPROCEEDINGS{Reguly:2012, 
+author={Reguly, I. and Giles, M.}, 
+booktitle={Proc. of Innovative Parallel Computing}, 
+series = {InPar '12},  
+title="Efficient sparse matrix-vector multiplication on cache-based {GPUs}", 
+year={2012}, 
+month=may, 
+pages={1-12},
+publisher={IEEE},  
+}
+doi={10.1109/InPar.2012.6339602}
+ address = {Piscataway, NJ, USA},
+
+@INPROCEEDINGS{Cao:2010, 
+author={Wei Cao and Lu Yao and Zongzhe Li and Yongxian Wang and Zhenghua Wang}, 
+booktitle={Proc. of 2010 In'tl Conf. on Computer Application and System Modeling}, 
+series = {ICCASM '10},
+title="Implementing Sparse Matrix-Vector multiplication using {CUDA} based on a hybrid sparse matrix format", 
+year={2010}, 
+month=oct, 
+volume={11}, 
+pages={161-165}, 
+publisher={IEEE},  
+keywords={computer graphic equipment;coprocessors;mathematics computing;matrix multiplication;parallel architectures;performance evaluation;sparse matrices;vectors;CUDA;ELLPACK-R format;GPU;JAD format;compute unified device architecture;data parallel general purpose computation;general purpose programming environment;load imbalance;modern graphics processing unit;sparse matrix vector multiplication;Arrays;Artificial neural networks;Graphics;Graphics processing unit;Instruction sets;Kernel;Sparse matrices;CUDA;ELLPACKRP;GPU;SpMV;matrix format}, }
+doi={10.1109/ICCASM.2010.5623237},
+ address = {Piscataway, NJ, USA},
+
+@article {Weber:2013,
+author = {Weber, Daniel and Bender, Jan and Schnoes, Markus and Stork, Andr\'e and Fellner, Dieter},
+title = "Efficient {GPU} Data Structures and Methods to Solve Sparse Linear Systems in Dynamics Applications",
+journal = {Computer Graphics Forum},
+volume = {32},
+number = {1},
+publisher = {Blackwell Publishing Ltd},
+issn = {1467-8659},
+pages = {16--26},
+year = {2013},
+}
+url = {http://dx.doi.org/10.1111/j.1467-8659.2012.03227.x},
+doi = {10.1111/j.1467-8659.2012.03227.x},
+
+@article{Buatois:2009, 
+ author = {Buatois, Luc and Caumon, Guillaume and Levy, Bruno},
+ title = "{Concurrent Number Cruncher}: A {GPU} Implementation of a General Sparse Linear Solver",
+ journal = {Int. J. Parallel Emerg. Distrib. Syst.},
+ volume = {24},
+ number = {3},
+ year = {2009},
+ issn = {1744-5760},
+ pages = {205--223},
+ numpages = {19},
+ acmid = {1552468},
+ publisher = {Taylor \& Francis, Inc.},
+ address = {Bristol, PA, USA},
+ keywords = {graphics processors, parallel processing, sparse numerical solver},
+} 
+ month = jun,
+ url = {http://dx.doi.org/10.1080/17445760802337010},
+ doi = {10.1080/17445760802337010},
+
+@article{Verschoor:2012,
+title = "Analysis and performance estimation of the Conjugate Gradient method on multiple {GPUs}",
+journal = PARCO,
+volume = "38",
+number = "10-11",
+pages = "552--575",
+year = "2012",
+note = "",
+issn = "0167-8191",
+author = "Mickeal Verschoor and Andrei C. Jalba",
+keywords = "Conjugate Gradient method",
+keywords = "Sparse-Matrix Vector multiplication",
+keywords = "Block Compressed Sparse Row format",
+keywords = "Performance analysis",
+keywords = "Performance estimation",
+keywords = "Multiple \{GPUs\} "
+}
+doi = "http://dx.doi.org/10.1016/j.parco.2012.07.002",
+url = "http://www.sciencedirect.com/science/article/pii/S0167819112000609",
+
+@inproceedings{Li:2013,
+ author = {Li, Jiajia and Tan, Guangming and Chen, Mingyu and Sun, Ninghui},
+ title = "{SMAT}: An Input Adaptive Auto-tuner for Sparse Matrix-vector Multiplication",
+ booktitle = {Proc. of 34th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+ series = {PLDI '13},
+ year = {2013},
+ isbn = {978-1-4503-2014-6},
+ location = {Seattle, Washington, USA},
+ pages = {117--126},
+ numpages = {10},
+ acmid = {2462181},
+ keywords = {SpMV, algebraic multi-grid, auto-tuning, data mining, sparse matrix-vector multiplication},
+} 
+ url = {http://doi.acm.org/10.1145/2491956.2462181},
+ doi = {10.1145/2491956.2462181},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+
+@INPROCEEDINGS{Karakasis:2009, 
+author={Karakasis, V. and Goumas, G. and Koziris, N.}, 
+booktitle={Proc. of 38th Int'l Conf. on Parallel Processing}, 
+series = {ICPP '09}, 
+title={Perfomance Models for Blocked Sparse Matrix-Vector Multiplication Kernels}, 
+year={2009}, 
+month=sep, 
+pages={356-364}, 
+ publisher = {IEEE Computer Society},
+keywords={matrix multiplication;optimisation;sparse matrices;storage management;blocking storage format;hardware prefetching mechanism;memory bandwidth;optimization technique;sparse matrix-vector multiplication;Bandwidth;Computer architecture;Concurrent computing;Degradation;Indexing;Kernel;Matrix decomposition;Parallel processing;Shape;Sparse matrices;blocking;performance models;sparse matrix-vector multiplication}, 
+ISSN={0190-3918},}
+doi={10.1109/ICPP.2009.21}, 
+ address = {Washington, DC, USA},
+
+@incollection{Monakov:2009, 
+author={Monakov, A. and Avetisyan, A.},
+title="Implementing Blocked Sparse Matrix-Vector Multiplication on {NVIDIA GPUs}",
+year={2009},
+isbn={978-3-642-03137-3},
+booktitle={Embedded Computer Systems: Architectures, Modeling, and Simulation},
+volume={5657},
+series={LNCS},
+ publisher = {Springer-Verlag},
+ pages={289-297}
+}
+ address = {Berlin, Heidelberg},
+editor={Bertels, Koen and Dimopoulos, Nikitas and Silvano, Cristina and Wong, Stephan},
+doi={10.1007/978-3-642-03138-0_32},
+url={http://dx.doi.org/10.1007/978-3-642-03138-0_32},
+
+@incollection{Cevahir:2009, 
+year={2009},
+isbn={978-3-642-01969-2},
+booktitle={Computational Science - ICCS 2009},
+volume={5544},
+series={LNCS},
+title="Fast Conjugate Gradients with Multiple {GPUs}",
+ publisher = {Springer},
+author={Cevahir, Ali and Nukada, Akira and Matsuoka, Satoshi},
+pages={893-903}
+}
+doi={10.1007/978-3-642-01970-8_90},
+url={http://dx.doi.org/10.1007/978-3-642-01970-8_90},
+editor={Allen, Gabrielle and Nabrzyski, Jarosaw and Seidel, Edward and Albada, GeertDick and Dongarra, Jack and Sloot, PeterM.A.},
+ address = {Berlin Heidelberg},
+
+@article{Saad:2013, 
+year={2013},
+issn={0920-8542},
+journal=SUPCOMP,
+volume={63},
+number={2},
+title="{GPU}-accelerated preconditioned iterative linear solvers",
+publisher={Springer US},
+keywords={GPU computing; Preconditioned iterative methods; Sparse matrix computations},
+author={Li, R. and Saad, Y.},
+pages={443-466},
+}
+doi={10.1007/s11227-012-0825-3},
+url={http://dx.doi.org/10.1007/s11227-012-0825-3},
+
+@ARTICLE{Koza:2012:TR,
+   author = {Koza, Z. and Matyka, M. and Szkoda, S. and Miroslaw, L.},
+    title = {Compressed Multiple-Row Storage Format},
+  journal = "{ArXiv e-prints }",
+  year = {2012},
+    month = mar,
+  eprint      = {http://arxiv.org/abs/1203.2946v1}, 
+}
+  adsurl = {http://adsabs.harvard.edu/abs/2012arXiv1203.2946K},
+  url      = {http://arxiv.org/abs/1203.2946v1}, 
+
+@ARTICLE{Koza:2014,
+   author = {Koza, Z. and Matyka, M. and Szkoda, S. and Miroslaw, L.},
+    title = {Compressed Multirow Storage Format for Sparse Matrices on Graphics Processing Units},
+  journal = SIAMJSC,
+  year = {2014},
+  volume={36},
+  number={2},
+  pages={C219-C239},  
+}
+
+@INPROCEEDINGS{Sun:2011:ICPP, 
+author={Xiangzheng Sun and Yunquan Zhang and Ting Wang and Xianyi Zhang and Liang Yuan and Li Rao}, 
+booktitle={Proc. of 40th Int'l Conf. on Parallel Processing}, 
+series = {ICPP '11}, 
+title="{Optimizing SpMV for diagonal sparse matrices on GPU}", 
+year={2011}, 
+month=sep, 
+pages={492-501}, 
+ publisher = {IEEE Computer Society},
+doi={10.1109/ICPP.2011.53},
+ISSN={0190-3918},}
+ address = {Washington, DC, USA},
+
+@article{Yang:2013:IJHPCA,
+author = {Yang, Wangdong and Li, Kenli and Liu, Yan and Shi, Lin and Wan, Lanjun}, 
+title = "Optimization of quasi-diagonal matrix-vector multiplication on {GPU}",
+year = {2014}, 
+journal =IJHPCA, 
+volume={28},
+number={2},
+pages={183-195},
+}
+month=may,
+
+@INPROCEEDINGS{Ahamed:2012, 
+author={Abal-Kassim Cheik Ahamed and Frederic Magoules}, 
+title={Fast Sparse Matrix-Vector Multiplication on Graphics Processing Unit for Finite Element Analysis}, 
+booktitle={Proc. of IEEE 14th Int'l Conference on High Performance Computing and Communications}, 
+series = {HPCC '12}, 
+year={2012}, 
+pages={1307--1314}, 
+}
+  publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@article{Liu:2012:IJNAM,
+author = {HUI Liu and SONG Yu and ZHANGXIN Chen and BEN Hsieh and LEI Shao}, 
+title = "Sparse matrix-vector multiplication on {NVIDIA GPU}",
+year = {2012}, 
+journal = {Int. J. Numerical Analysis and Modeling, Series B},
+volume={3},
+number={2}, 
+pages={185--191},
+}
+
+@INPROCEEDINGS{Hugues:2010, 
+author={Hugues, M. R. and Petiton, S. G.}, 
+booktitle={Proc. of 12th IEEE Int'l Conf. on High Performance Computing and Communications}, 
+series = {HPCC '10},  
+title="Sparse Matrix Formats Evaluation and Optimization on a {GPU}", 
+year={2010}, 
+month=sep, 
+ publisher = {IEEE Computer Society},
+pages={122--129}, }
+doi={10.1109/HPCC.2010.85},
+ address = {Washington, DC, USA},
+
+@incollection{Williams:2010:DBKbook,
+   author = {Sam Williams and Nathan Bell and Jee Whan Choi and Michael Garland and Leonid Oliker and Richard Vuduc},
+   title = {Sparse Matrix-Vector Multiplication on Multicore and Accelerators},
+   booktitle = {Scientific Computing on Multicore and Accelerators},
+   editors = {Jakub Kurzak and David A . Bader and Jack Dongarra},
+   publisher = {CRC Press}, 
+   address = {Boca Raton, FL}, 
+    pages = {83--109},
+   year = {2010}, 
+   month = dec,
+}
+
+@article{Williams:2009:Parco,
+author = {Samuel Williams and Leonid Oliker and Richard Vuduc and John Shalf and Katherine Yelick and James Demmel},
+title = {Optimization of sparse matrix-vector multiplication on emerging multicore platforms},
+journal = PARCO,
+volume = {35},
+number = {3},
+pages = {178--194},
+year = {2009},
+}
+doi = "http://dx.doi.org/10.1016/j.parco.2008.12.006",
+url = "http://www.sciencedirect.com/science/article/pii/S0167819108001403",
+
+@incollection{Cardellini:2014,
+   author = {Cardellini, V. and  Fanfarillo, A. and  Filippone, S.},
+   title = "Heterogeneous Sparse Matrix Computations on Hybrid {GPU/CPU} Platforms",
+   series = {Advances in Parallel Computing}, 
+   volume = {25}, 
+   booktitle = {Parallel Computing: Accelerating Computational Science and Engineering (CSE)},
+   publisher = {IOS Press},
+    pages = {203--212},
+   year = {2014}, 
+}
+   address = {Amsterdam, The Netherlands}, 
+
+@article{Davis:2004:UMFPACK,
+ author = {Davis, T. A.},
+ title = "Algorithm 832: {UMFPACK V4.3}---an Unsymmetric-pattern Multifrontal Method",
+  journal = ACMTMS,
+ issue_date = {June 2004},
+ volume = {30},
+ number = {2},
+ year = {2004},
+ issn = {0098-3500},
+ pages = {196--199},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/992200.992206},
+ doi = {10.1145/992200.992206},
+ acmid = {992206},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {linear equations, multifrontal method, ordering methods, sparse nonsymmetric matrices},
+} 
+ month = jun,
+
+@TechReport{OurTechRep,
+  author = 	 "Davide Barbieri and Valeria Cardellini and Alessandro Fanfarillo and Salvatore Filippone",
+  title = 	 "Three Storage Formats for Sparse Matrices on {GPGPUs}",
+  institution =  "Universit\`a di Roma Tor Vergata",
+  year = 	 "2015",
+  type = 	 "",
+  number = 	 "DICII RR-15.6",
+  note = "\url{http://hdl.handle.net/2108/113393}"
+}
+  month = 	 feb,
+
+@ARTICLE{Yang:2015, 
+author={Yang, W. and Li, K. and Mo, Z. and Li, K.}, 
+journal=IEEETOC, 
+title="{Performance optimization using partitioned SpMV on GPUs and multicore CPUs}", 
+year={2015}, 
+month={}, 
+volume={64}, 
+number={9}, 
+pages={2623--2636}, 
+keywords={Computational modeling;Multicore processing;Partitioning algorithms;Program processors;Sparse matrices;Vectors;GPU;matrix partition;multicore CPU;probability distribution;sparse matrix-vector multiplication}, 
+doi={10.1109/TC.2014.2366731}, 
+ISSN={0018-9340}, }
+
+@article{Bolz:2003,
+ author = {Bolz, Jeff and Farmer, Ian and Grinspun, Eitan and Schr\"{o}oder, Peter},
+ title = "Sparse Matrix Solvers on the {GPU}: Conjugate Gradients and Multigrid",
+ journal = TOG,
+ issue_date = {July 2003},
+ volume = {22},
+ number = {3},
+ year = {2003},
+ issn = {0730-0301},
+ pages = {917--924},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/882262.882364},
+ doi = {10.1145/882262.882364},
+ acmid = {882364},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {GPU computing, Navier-Stokes, conjugate gradient, fluid simulation, mesh smoothing, multigrid, numerical simulation},
+} 
+ month = jul,
+
+@INPROCEEDINGS{Yang:IPEMC:2012, 
+author={Mei Yang and Cheng Sun and Zhimin Li and Dayong Cao}, 
+booktitle={Proc. of 7th Int'l Power Electronics and Motion Control Conf.}, 
+series={IPEMC '12}, 
+title="An improved sparse matrix-vector multiplication kernel for solving modified equation in large scale power flow calculation on {CUDA}", 
+year={2012}, 
+month=jun, 
+volume={3}, 
+pages={2028-2031}, 
+publisher = {IEEE}, 
+doi={10.1109/IPEMC.2012.6259153},}
+
+@ARTICLE{Langr:2015, 
+author={Langr, D. and Tvrdik, P.}, 
+journal=TPDS, 
+title={Evaluation Criteria for Sparse Matrix Storage Formats}, 
+year={2016}, 
+month={}, 
+volume={27}, 
+number={2}, 
+pages={428--440},  
+keywords={Indexes;Matrix converters;Memory management;Runtime;Sparse matrices;Standards;Evaluation criterion;matrix-vector multiplication;memory footprint;nonzero matrix structure;sparse matrix;storage format;test matrices}, 
+doi={10.1109/TPDS.2015.2401575}, 
+ISSN={1045-9219}, }
+
+@INPROCEEDINGS{Greathouse:2014, 
+author={Greathouse, J.L. and Daga, M.}, 
+booktitle={Proc. of Int'l Conf. for High Performance Computing, Networking, Storage and Analysis}, 
+series = {SC '14}, 
+title="Efficient Sparse Matrix-Vector Multiplication on {GPU}s Using the {CSR} Storage Format", 
+year={2014}, 
+month=nov, 
+pages={769-780}, 
+ publisher = {IEEE},
+doi={10.1109/SC.2014.68},}
+ address = {Piscataway, NJ, USA},
+
+@INPROCEEDINGS{Maggioni:2014:IPDPSW, 
+author={Maggioni, M. and Berger-Wolf, T.}, 
+booktitle={Proc. of 2014 IEEE Int'l Parallel Distributed Processing Symposium Workshops}, 
+series = {IPDPSW '14}, 
+title="{CoAdELL}: Adaptivity and Compression for Improving Sparse Matrix-Vector Multiplication on {GPUs}", 
+year={2014}, 
+month=may, 
+pages={933-940}, 
+doi={10.1109/IPDPSW.2014.106},}
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+
+@article {Wong:2015,
+author = {Wong, J. and Kuhl, E. and Darve, E.},
+title = {A new sparse matrix vector multiplication graphics processing unit algorithm designed for finite element problems},
+journal = {Int'l J. Numerical Methods in Engineering},
+issn = {1097-0207},
+url = {http://dx.doi.org/10.1002/nme.4865},
+doi = {10.1002/nme.4865},
+pages={1784--1814}, 
+volume = {102},
+number = {12},
+keywords = {biomechanics, finite element methods, linear solvers, parallelization},
+year = {2015}, }
+
+@inproceedings{Oberhuber:2012,
+  author    = {M. Heller and Tom{\'a}s Oberhuber},
+  title     = "{Improved row-grouped CSR format for storing of sparse matrices on GPU}",
+  booktitle   = {Proc. of Algoritmy 2012},
+year={2012}, 
+  pages = {282-290}, }
+  
+@article{Kreutzer:2014,
+author = {Moritz Kreutzer and Georg Hager and Gerhard Wellein and Holger Fehske and Alan R. Bishop},
+title = "A Unified Sparse Matrix Data Format for Efficient General Sparse Matrix-Vector Multiplication on Modern Processors with Wide {SIMD} Units",
+journal = SIAMJSC,
+volume = {36},
+number = {5},
+pages = {C401-C423},
+year = {2014},
+doi = {10.1137/130930352},
+URL = {http://dx.doi.org/10.1137/130930352},
+}
+
+@TechReport{Anzt:2014,
+ author = {Anzt, Hartwig and Tomov, Stanimire and Dongarra, Jack},
+ title = 	 "Implementing a sparse matrix vector product for the {SELL-C/SELL-C-$\sigma$ formats on NVIDIA GPUs}",
+  institution =  "University of Tennessee",
+  number = "EECS-14-727",
+  year = 	 "2014",
+}
+  month = mar,
+
+@ARTICLE{Tang:2014, 
+author={Tang, W. and Tan, W. and Goh, R. and Turner, S. and Wong, W.}, 
+journal=TPDS, 
+title="A Family of Bit-Representation-Optimized Formats for Fast Sparse Matrix-Vector Multiplication on the {GPU}", 
+year={2015}, 
+month={}, 
+volume={29}, 
+number={9}, 
+pages={2373--2385}, 
+keywords={Arrays;Graphics processing units;Indexes;Instruction sets;Kernel;Sparse matrices}, 
+doi={10.1109/TPDS.2014.2357437}, 
+ISSN={1045-9219}, }
+
+@inproceedings{Ashari:SC2014,
+ author = {Ashari, Arash and Sedaghati, Naser and Eisenlohr, John and Parthasarathy, Srinivasan and Sadayappan, P.},
+ title = "Fast Sparse Matrix-vector Multiplication on {GPU}s for Graph Applications",
+ booktitle = {Proc. of  Int'l Conf. for High Performance Computing, Networking, Storage and Analysis},
+ series = {SC '14},
+ year = {2014},
+ isbn = {978-1-4799-5500-8},
+ location = {New Orleans, Louisana},
+ pages = {781--792},
+ numpages = {12},
+ url = {http://dx.doi.org/10.1109/SC.2014.69},
+ doi = {10.1109/SC.2014.69},
+ acmid = {2683679},
+ keywords = {ACSR, CSR, GPU, HYB, SpMV},
+} 
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+
+@INPROCEEDINGS{Yang:2012:IPEMC, 
+author={Mei Yang and Cheng Sun and Zhimin Li and Dayong Cao}, 
+title="An improved sparse matrix-vector multiplication kernel for solving modified equation in large scale power flow calculation on {CUDA}",
+booktitle={Proc. of 7th Int'l Power Electronics and Motion Control Conf.}, 
+series = {IPEMC '12}, 
+year={2012}, 
+month=jun, 
+volume={3}, 
+pages={2028-2031}, 
+  publisher = {IEEE},
+keywords={Presses;CUDA;Compressed sparse row (CSR) storage format;GPU;Parallel algorithm;Sparse matrix-vector multiplication;modified equation;power flow calculation}, 
+doi={10.1109/IPEMC.2012.6259153}
+}
+ address = {Piscataway, NJ, USA},
+
+@article{Ashari:2015,
+author = "Arash Ashari and Naser Sedaghati and John Eisenlohr and P. Sadayappan", 
+title = "A model-driven blocking strategy for load balanced sparse matrix-vector multiplication on {GPUs}",
+journal = JPDC,
+volume = "76",
+number = {},
+pages = {3-15},
+year = {2015},
+issn = "0743-7315",
+doi = "http://dx.doi.org/10.1016/j.jpdc.2014.11.001",
+url = "http://www.sciencedirect.com/science/article/pii/S0743731514002081",
+month = feb,
+}
+note = "Special Issue on Architecture and Algorithms for Irregular Applications",
+
+@article{DamFil:2015,
+author="Pasqua D'Ambra and Salvatore Filippone",
+title="A Parallel Generalized Relaxation Method for High-Performance Image Segmentation on {GPUs}",
+journal=JCAM,
+year={2016},
+  volume =   293,
+pages={35-44}, 
+}
+
+@article{BaCaFaFi:15,
+author="Davide Barbieri and Valeria Cardellini and Alessandro
+  Fanfarillo and Salvatore Filippone",
+title="Sparse Matrix-Vector Multiplication on {GPGPUs}",
+journal=ACMTMS,
+year="2015",
+pages="Submitted"
+}
+
+@article{gps:siam,
+  author =   {N. E. Gibbs and W. G. Poole, Jr. and P.
+                  K. Stockmeyer},
+  title =    {An Algorithm for Reducing the Bandwidth and Profile
+                  of a Sparse Matrix},
+  journal =  {SIAM J. Numerical Analysis},
+  volume =   18,
+  number =   2,
+  pages =    {235--251},
+  year =     1976
+}
+
+@misc{Baxter,
+   author =   {Baxter, S.},
+   key = "ModernGPU",
+   title =   "{Modern GPU library}",
+   year = 2013,
+   note = "\url{http://nvlabs.github.io/moderngpu/}"
+ }
+ 
+ @inproceedings{Liu:2015,
+ author = {Liu, W. and Vinter, B.},
+ title = "{CSR5}: An Efficient Storage Format for Cross-Platform Sparse Matrix-Vector Multiplication",
+ booktitle = {Proc. of 29th Int'l ACM Conf. on Supercomputing},
+ series = {ICS '15},
+ year = {2015},
+ pages = {},
+} 
+
+@inproceedings{Langr:2013,
+author={Langr, D. and Tvrdik, P. and Simecek, I.},
+title={Storing Sparse Matrices in Files in the Adaptive-Blocking Hierarchical Storage Format},
+booktitle={Proc. of 2013 Federated Conference on Computer Science and Information Systems},
+series={FedCSIS '13},
+year=2013,
+pages="479--486",
+publisher={IEEE},
+}
+month="September",
+
+@misc{SparseMAGMA,
+  author = 	 "",
+  title = 	 "Matrix Algebra on {GPU} and Multicore Architectures",
+ key = "MAGMA",
+  year = 	 "2016",
+  month = 	 sep,
+  note = "\url{http://icl.cs.utk.edu/magma/}"
+}
+
+@Article{DolanMore:2002,
+author="Dolan, D. Elizabeth
+and Mor{\'e}, J. Jorge",
+title="Benchmarking optimization software with performance profiles",
+journal="Mathematical Programming",
+volume="91",
+number="2",
+pages="201--213",
+abstract="We propose performance profiles --- distribution functions for a performance metric --- as a tool for benchmarking and comparing optimization software. We show that performance profiles combine the best features of other tools for performance evaluation.",
+issn="1436-4646",
+year=2002,
+doi="10.1007/s101070100263",
+url="http://dx.doi.org/10.1007/s101070100263"
+}
+
+@Article{KuhlVass:2013,
+author="Kuhlemann, Verena and Vassilievski, Panayot S.",
+title="Improving the Communication Pattern in Matrix-Vector Operations for Large 
+  Scale-Free Graphs by Disaggregation", 
+doi="http://epubs.siam.org/doi/abs/10.1137/12088313X",
+journal=SIAMJSC,
+year=2013,
+volume=35,
+number=5,
+pages="S465--S486"
+}
+
+@inproceedings{Sedaghati:2015,
+ author = {Sedaghati, Naser and Mu, Te and Pouchet, Louis-Noel and Parthasarathy, Srinivasan and Sadayappan, P.},
+ title = "Automatic Selection of Sparse Matrix Representation on {GPUs}",
+ booktitle = {Proc. of 29th ACM Int'l Conf. on Supercomputing},
+ series = {ICS '15},
+ year = {2015},
+ isbn = {978-1-4503-3559-1},
+ location = {Newport Beach, California, USA},
+ pages = {99--108},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/2751205.2751244},
+ doi = {10.1145/2751205.2751244},
+ acmid = {2751244},
+ keywords = {gpu, machine learning models, spmv},
+} 
+ publisher = {ACM},
+ address = {New York, NY, USA},
+
+@INPROCEEDINGS{LiuSchmidt:2015, 
+author={Yongchao Liu and B. Schmidt}, 
+booktitle={Proc. of 26th Int'l Conf. on Application-specific Systems, Architectures and Processors}, 
+series = {ASAP '15}, 
+title="{LightSpMV: Faster CSR-based sparse matrix-vector multiplication on CUDA-enabled GPUs}", 
+year={2015}, 
+pages={82-89}, 
+keywords={graphics processing units;matrix multiplication;parallel architectures;sparse matrices;CPU-centric programs;CSR-based sparse matrix-vector multiplication;CUDA-compatible SpMV algorithm;CUDA-enabled GPU;CUSP libraries;GPU computing;LightSpMV;Tesla K40c GPU;atomic operations;compressed sparse row;cuSPARSE libraries;dynamic row distribution approaches;sparse matrix storage;storage formats;storage overheads;vector levels;warp levels;warp shuffle functions;Broadcasting;Computer architecture;Graphics processing units;Indexes;Instruction sets;Kernel;Sparse matrices}, 
+doi={10.1109/ASAP.2015.7245713}, 
+month=jul,}
+
+@Article{Anzt:16,
+  author =  {Anzt, Hartwig and  Kreutzer, Moritz and Ponce, Eduardo and Peterson, Gregory D. and Wellein, Gerhard and Dongarra, Jack},
+  title = 	 "Optimization and performance evaluation of the {IDR} iterative {K}rylov solver on {GPU}s",
+  journal = 	 IJHPCA,
+  year = 	 "2016",
+  volume = 	 "",
+  number = 	 "",
+  pages = 	 "",
+month=may,}
+
+@article{Maggioni:2016,
+author = "Marco Maggioni and Tanya Berger-Wolf",
+title = "Optimization techniques for sparse matrix-vector multiplication on {GPUs}",
+journal = JPDC,
+volume = "93--94",
+number = "",
+pages = "66--86",
+year = "2016",
+}
+doi = "http://dx.doi.org/10.1016/j.jpdc.2016.03.011",
+url = "http://www.sciencedirect.com/science/article/pii/S0743731516300028",
+
+@INPROCEEDINGS{Daga:2015, 
+author={M. Daga and J. L. Greathouse}, 
+booktitle={Proc. of IEEE 22nd Int'l Conf. on High Performance Computing}, 
+series = {HiPC '15}, 
+title="Structural Agnostic {SpMV}: Adapting {CSR-Adaptive} for Irregular Matrices", 
+year={2015}, 
+pages={64-74}
+}
+
 
 @article{Filippone:2017:SMM:3034774.3017994,
  author = {Filippone, Salvatore and Cardellini, Valeria and Barbieri, Davide and Fanfarillo, Alessandro},

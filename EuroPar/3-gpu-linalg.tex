@@ -1,8 +1,40 @@
  \section{Sparse linear algebra on GPUs}
 
 General Purpose Graphics Processing Units (GPGPUs)~\cite{Luebke06}  
-are today an established and attractive choice 
-in the world of scientific computing, found in many among the fastest
-supercomputers on the Top 500 list,  and even   
-being offered as %an infrastructure service in Cloud computing, 
-a Cloud service, e.g.,  Amazon EC2. 
+are today an established and attractive choice in the world of
+scientific computing, found in many among the fastest supercomputers
+on the Top~500 list, and offered in standard Cloud infrastructure
+services, e.g. in  Amazon EC2. It is therefore not surprising that
+they are at the focus of many research efforts revolving around the
+efficient implementation of scientific software, including solvers for
+sparse linear system of equations. 
+
+Many applications use iterative methods to solve sparse linear
+systems;  the most popular ones are those based on  Krylov subspace 
+projection methods~\cite{MR1990645}. 
+
+From a  software point of view, all Krylov methods employ the matrix $A$ 
+to perform matrix-vector products  $y\gets Ax$, whose efficient
+implementation provides significant challenges on all modern computer
+architectures. 
+The SpMV kernel is well-known to be a memory bounded application;
+and  its bandwidth usage  is strongly dependent on both the input
+matrix and on the underlying computing platform(s). For a detailed
+overview of the implementation issues and a survey of available
+techniques for this kernel on GPUs,
+see~\cite{Filippone:2017:SMM:3034774.3017994}.   
+
+For most real-world problems,it is necessary to combine the Krylov
+solvers with  \emph{preconditioners}. A preconditioner is a
+transformation applied to the coefficient  matrix such that the
+resulting linear system has better convergence properties. Examples of
+popular preconditioners include Jacobi and Gauss-Seidel iterations,
+Block Jacobi and Additive Schwarz coupled with incomplete
+factorizations,  and Algebraic Multigrid. 
+
+To implement a linear system solver on a parallel computing
+architecture we typically use a \emph{domain decomposition} approach,
+in which subsets of the computational domain are assigned to different
+computing nodes. When considering 
+
+
