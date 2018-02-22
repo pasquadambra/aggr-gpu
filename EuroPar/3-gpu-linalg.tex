@@ -1,4 +1,4 @@
- \section{Sparse linear algebra on GPUs}
+\section{Sparse linear algebra and preconditioners on GPUs}
 
 General Purpose Graphics Processing Units (GPGPUs)~\cite{Luebke06}  
 are today an established and attractive choice in the world of
@@ -35,6 +35,111 @@ factorizations,  and Algebraic Multigrid.
 To implement a linear system solver on a parallel computing
 architecture we typically use a \emph{domain decomposition} approach,
 in which subsets of the computational domain are assigned to different
-computing nodes. When considering 
+computing nodes. Domain decomposition requires to achieve a number of
+trade-offs among multiple factors:
+\begin{itemize}
+\item Many preconditioners, e.g. Gauss-Seidel or incomplete
+  factorizations, employ kernels for the solution to sparse triangular
+  systems; in using sparse triangular solvers, we normally  want the
+  sparsity pattern to be of the same order as that of the original
+  coefficient matrix;
+\item However, the amount of parallelism available in a sparse
+  triangular solution is dependent on the number of nonzeros in the
+  sparse factors, and is usually very small;
+\item To overcome this issue, most preocnditioners use a Block Jacobi
+  or hybrid Gauss-Seidel strategy, in which the sparse triangular
+  solve is used only within the local subdomain, while employing a
+  global Jacobi-like correction;
+\item Unfortunately, the convergence properties of these local schemes
+  deteriorate with increased parallelism.
+\end{itemize}
+The last phenomenon is often described as a loss of \emph{algorithmic
+  scalability}, i.e. the ability to obtain a convergence history that
+is independent of the degree of parallelism. In summary, simple
+preconditioning schemes such as Point Jacobi have good algorithmic scalability,
+because their convergence properties do not change much with an
+increasing number of processes, but the more sophisticated
+Gauss-Seidel and incomplete factorizations are a lot more efficient in
+serial computations. 
 
+Multilevel corrections, or Algebraic Multigrid  preconditioners, offer
+a way to recover algorithmic scalability:
+it is possible to apply efficient local approximate solvers, while a
+good convergence history is recovered by relying on the multilevel
+corrections. 
+
+Finding the preconditioning combination that gives the best overall
+performance is thus a very complex enterprise. In this context, the
+ability to combine multiple options in a flexible framework such as
+the one we described in~\cite{mld-toms} is an essential ingredient. 
+
+
+Additional considerations are necessary when implementing
+preconditioning operations on GPUs. First of all, implementing the
+solution of sparse triangualr systems on GPUs is extremely difficult.
+As an example, the conjugate gradient preconditioned with incomplete
+LU available in CUDA CuSPARSE since version 4.0~\cite{Naumov11}
+achieves at best a speedup factor of about 2 over a standard CPU
+implementation. The main reason is that the GPU requires a massive
+amount of data parallelism to be exploited, and in the sparse
+triangular factors the amount of available parallelism is limited by
+the sparsity. 
+The two main  options that  are available  involve the use of
+matrix-vector products as their main kernel:
+\begin{itemize}
+\item Point-Jacobi iterations; 
+\item (Local) preconditioning through sparse approximation of the
+  inverses.
+\end{itemize}
+For a discussion of sparse approximate inverses on GPUs 
+see~\cite{BERTACCINI2016693}. 
+
+
+The implementation of the multilevel preconditioners for which we will
+present results in this paper is based on MLD2P4~\cite{mld-toms} and
+PSBLAS~\cite{psblas3}. Thanks to the modular architecture of both
+packages, it is possible to define \emph{plugins} for 
+\begin{itemize}
+\item Operators on the GPU, including sparse matrix-vector product
+  supporting multiple storage formats and vector-vector operations;
+\item Approximate inverses as local solvers.
+\end{itemize}
+By combining these ingredients in a multilevel framework we can obtain
+interesting scalability results. 
+
+Three additional practical obstacles must be mentioned here. 
+First of all, the preconditioner is invoked at least once per
+iteration of the Krylov method.  Because the allocation of memory
+on the GPU is an expennse synchronization point, this means that the
+memory space for internal work areas must be preallocated for all
+invocations  of the preconditioner; allocation of auxiliary data areas at
+each invocation of the prevonditioner is perfectly doable on the CPU
+side, but leads to a slowdown by a factor of 2 on the GPU. 
+
+The second issue has to do with the implementation of the
+matrix-vector product on the GPU: as mentioned
+in~\cite{Filippone:2017:SMM:3034774.3017994}, the most effective
+storage formats are often derived from ELLPACK  and assign one thread
+per row of the matrix; this means that to exploit a GPU it is
+necessary to have matrices which are sufficiently large to keep all
+computing units busy, and this is very difficult at the coarse level
+of the preconditioner hierarchy because the size of the aggregates is
+small. Indeed, it may be convenient to limit the number of levels to
+be less than the default that would be used in a normal CPU
+implementation. 
+{\bf DA VERIFICARE CON I DATI DI PERFORMANCE}. 
+
+The third issue is related to the efficiency of communication between
+the various computing nodes; to proceed with the computation of the
+matrix-vector product in parallel between the different nodes, it is
+necessary to exchange the data of the \emph{halo}. For good data
+partitions, the amount of data to be exchanged displays a
+surface-to-volume effect, and therefore large products can be computed
+effectively; howeveer when moving between different levels of the
+preconditioning hierarchy we are precisely going towards smaller
+matrices, hence the surface-to-volume ratio and the efficiency of the
+parallelization decreases. The speed ratio of the GPU with respect to
+the CPU only makes things worse; again, it may be necessary to limit
+the number of levels to less than what would be efficient when using
+CPUs. 
 
