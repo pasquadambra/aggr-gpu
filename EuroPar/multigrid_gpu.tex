@@ -1,24 +1,35 @@
-%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% sample root file for your "contribution" to a proceedings volume
-%
-% Use this file as a template for your own input.
-%
-%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{llncs}
 
+\usepackage[american]{babel}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
 
-\documentclass{svproc}
-%
-% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+\usepackage[
+bookmarks=false,
+breaklinks=true,
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=black,
+pdfpagelayout=SinglePage
+]{hyperref}
+% enables correct jumping to figures when referencing
+% \usepackage[all]{hypcap}
 
 % to typeset URLs, URIs, and DOIs
 \usepackage{url}
 \def\UrlFont{\rmfamily}
+\usepackage{epstopdf}
+\usepackage[]{subfig}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+
+\usepackage{bbding}
+
 
 \begin{document}
-\mainmatter              % start of a contribution
-%
+
 \title{Efficient Algebraic Multigrid Preconditioners \\on Clusters of GPUs}
 %
 %\titlerunning{Hamiltonian Mechanics}  % abbreviated title (for running head)
@@ -30,10 +41,6 @@
 Daniela di Serafino\inst{3} \and  Salvatore Filippone\inst{4}}
 %
 %\authorrunning{} % abbreviated author list (for running head)
-%
-%%%% list of authors for the TOC (use if author list has to be modified)
-\tocauthor{Ivar Ekeland, Roger Temam, Jeffrey Dean, David Grove,
-Craig Chambers, Kim B. Bruce, and Elisa Bertino}
 %
 \institute{Universit\`a degli Studi di Roma ``Tor Vergata'', Roma, Italy\\
  \email{\{ambra.abdullahi,cardellini\}@uniroma2.it}
@@ -72,13 +79,14 @@ porous media.
 % Sparse linear algebra on GPU e limitazioni del nucleo risoluzione di sistemi triangolari, uso delle inverse approssimate e focus sulla INVK di PSBLAS.
 \input{4-experiments.tex}
 
-\paragraph{Acknowledgements}
+%%%%%%% ACK
+%\subsection*{Acknowledgments}\label{sec:Acknowledgments}
 
 
 %
 % ---- Bibliography ----
 %
-\bibliographystyle{abbrv}
+\bibliographystyle{splncs03}
 \bibliography{europar,ainv}
 
 % \begin{thebibliography}{6}
