@@ -1,4 +1,4 @@
-\section{Sparse linear algebra and preconditioners on GPUs}
+\section{Sparse Linear Algebra and Preconditioners on GPUs}
 
 General Purpose Graphics Processing Units (GPGPUs)~\cite{Luebke06}  
 are today an established and attractive choice in the world of
@@ -17,12 +17,11 @@ From a  software point of view, all Krylov methods employ the matrix $A$
 to perform matrix-vector products  $y\gets Ax$, whose efficient
 implementation provides significant challenges on all modern computer
 architectures. 
-The SpMV kernel is well-known to be a memory bounded application;
+The SpMV kernel is well-known to be a memory-bounded application;
 and  its bandwidth usage  is strongly dependent on both the input
 matrix and on the underlying computing platform(s). For a detailed
 overview of the implementation issues and a survey of available
-techniques for this kernel on GPUs,
-see~\cite{Filippone:2017:SMM:3034774.3017994}.   
+techniques for this kernel on GPUs, see~\cite{Filippone:2017:SMM:3034774.3017994}.   
 
 For most real-world problems,it is necessary to combine the Krylov
 solvers with  \emph{preconditioners}. A preconditioner is a
@@ -33,7 +32,7 @@ Block Jacobi and Additive Schwarz coupled with incomplete
 factorizations,  and Algebraic Multigrid. 
 
 To implement a linear system solver on a parallel computing
-architecture we typically use a \emph{domain decomposition} approach,
+architecture, we typically use a \emph{domain decomposition} approach,
 in which subsets of the computational domain are assigned to different
 computing nodes. Domain decomposition requires to achieve a number of
 trade-offs among multiple factors:
@@ -46,7 +45,7 @@ trade-offs among multiple factors:
 \item However, the amount of parallelism available in a sparse
   triangular solution is dependent on the number of nonzeros in the
   sparse factors, and is usually very small;
-\item To overcome this issue, most preocnditioners use a Block Jacobi
+\item To overcome this issue, most preconditioners use a Block Jacobi
   or hybrid Gauss-Seidel strategy, in which the sparse triangular
   solve is used only within the local subdomain, while employing a
   global Jacobi-like correction;
@@ -54,16 +53,16 @@ trade-offs among multiple factors:
   deteriorate with increased parallelism.
 \end{itemize}
 The last phenomenon is often described as a loss of \emph{algorithmic
-  scalability}, i.e. the ability to obtain a convergence history that
+  scalability}, i.e., the ability to obtain a convergence history that
 is independent of the degree of parallelism. In summary, simple
-preconditioning schemes such as Point Jacobi have good algorithmic scalability,
+preconditioning schemes, such as Point Jacobi, have good algorithmic scalability,
 because their convergence properties do not change much with an
 increasing number of processes, but the more sophisticated
 Gauss-Seidel and incomplete factorizations are a lot more efficient in
 serial computations. 
 
 Multilevel corrections, or Algebraic Multigrid  preconditioners, offer
-a way to recover algorithmic scalability:
+a way to recover algorithmic scalability: 
 it is possible to apply efficient local approximate solvers, while a
 good convergence history is recovered by relying on the multilevel
 corrections. 
@@ -73,10 +72,9 @@ performance is thus a very complex enterprise. In this context, the
 ability to combine multiple options in a flexible framework such as
 the one we described in~\cite{mld-toms} is an essential ingredient. 
 
-
 Additional considerations are necessary when implementing
 preconditioning operations on GPUs. First of all, implementing the
-solution of sparse triangualr systems on GPUs is extremely difficult.
+solution of sparse triangular systems on GPUs is extremely difficult.
 As an example, the conjugate gradient preconditioned with incomplete
 LU available in CUDA CuSPARSE since version 4.0~\cite{Naumov11}
 achieves at best a speedup factor of about 2 over a standard CPU
@@ -135,11 +133,10 @@ matrix-vector product in parallel between the different nodes, it is
 necessary to exchange the data of the \emph{halo}. For good data
 partitions, the amount of data to be exchanged displays a
 surface-to-volume effect, and therefore large products can be computed
-effectively; howeveer when moving between different levels of the
+effectively; however when moving between different levels of the
 preconditioning hierarchy we are precisely going towards smaller
 matrices, hence the surface-to-volume ratio and the efficiency of the
 parallelization decreases. The speed ratio of the GPU with respect to
 the CPU only makes things worse; again, it may be necessary to limit
 the number of levels to less than what would be efficient when using
 CPUs. 
-
