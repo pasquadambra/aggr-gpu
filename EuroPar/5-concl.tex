@@ -1,1 +1,12 @@
 \section{Conclusions}
+In this paper we have presented an implementation of AMG
+preconditioners running on clusters equipped with NVIDIA GPUs; the
+implementation is based on our set of packages PSBLAS and MLD2P4. 
+We have presented results on a groundwater simulation from the H2020
+EoCoE project, showing scalability up to 128 GPUs and 256 millions
+equations. 
+
+Future work will include exploration of alternative aggregation
+schemes, such as the one presented in~\cite{bcm-toms}, as well as the
+development of a GPU-enable preconditioner setup code, to speed-up the
+overall solution phase. 

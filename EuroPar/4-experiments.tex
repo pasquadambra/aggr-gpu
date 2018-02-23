@@ -6,11 +6,11 @@ arisen from a groundwater modelling application developed at the
 Juelich Supercomputing Centre (JSC)  dealing with numerical simulation
 of the filtration of 3D incompressible single-phase flows through
 anisotropic porous media. It is an elliptic equation with no flow
-boundary conditions. The linear systems arises from the discretization
+boundary conditions;  the linear systems arises from the discretization
 of the equation performed by a cell-centered finite colume scheme
 (two-point flux approximation) on a Cartesian grid, with nonzero
 entries distributed over seven diagonals. In these tests, we will
-consider a homogeneous permeability tensor.  This application comes
+consider a homogeneous permeability tensor;  this application comes
 from the framework of the Horizon 2020 EoCoE Project (Grant
 676629). 
 
@@ -104,10 +104,11 @@ time is obtained with 4 levels.
 In summary, the aggregation algorithm is capable of obtaining very
 good algorithmic scalability, but in some cases at the expense of time
 per iteration, so that it does not necessarily correspond to the best
-solution time.
+solution time. 
 Additional work will be required to design aggregation
-strategies capable of obtaining a better trade-off; some
-possible directions are outlined in~\cite{bcm-toms}. 
+strategies capable of obtaining a better trade-off with as little user
+intervention as possible; some possible directions are outlined
+in~\cite{bcm-toms}.  
 
 
 
