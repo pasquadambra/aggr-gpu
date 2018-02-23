@@ -18,6 +18,14 @@ MultiGrid methods rely their efficiency on the recursive application
 of two complementary processes: {relaxation and coarse-grid
   correction}. 
 
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=.8\textwidth]{multilevel.png}
+\caption{A MultiGrid hierarchy.\label{hierarchy}}
+\end{center}
+\end{figure}
+
+
 Relaxation consists in the application of an iterative method, such as
 Jacobi or Gauss-Seidel, to reduce highly oscillatory error components,
 while the coarse-grid correction corresponds to the solution of the

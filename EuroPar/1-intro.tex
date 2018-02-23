@@ -1,1 +1,47 @@
 \section{Introduction}
+
+
+We are concerned with the solution of linear sysutems 
+ \begin{equation}
+ Ax = b, \qquad x,b \in \Bbb{R}^n,\, A\in \Bbb{R}^{n\times n},
+\label{eq:linsys}
+\end{equation}
+where the matrix $A$ is large and sparse;  \emph{large}  in our
+context means millions or even billions of unknowns, whreas
+\emph{sparse} means that most coefficients in $A$ are zero, and it is
+convenient to employ special storage formats. 
+
+Many popular algorithms for large and sparse systems are
+\emph{iterative}, i.e. starting from an initial guess $x_0$ they build
+a sequence of approximations  $x_1,x_2,\dots,x_i$ that (hopefully)
+converges to the solution of~\ref{eq:linsys}; since the time to
+solution is determined by the product between the number of iterations
+and the time per iteration, it is clear that the most effective
+methods will be the ones that achieve an optimal trade-off between the
+method complexity and its speed of convergence. 
+
+A critical feature of practical methods is the use of preconditioners,
+i.e transformation of the type 
+\begin{equation}\label{eq:preclinsys}
+M^{-1}Ax=M^{-1}b.
+\end{equation} 
+that aim at improving the spectral qualities of the resulting system
+matrix, and therefore achieve better convergence; note that the
+product $M^{-1}A$ is usually  not computed explicitly. 
+
+When dealing with preconditioned iterations, we need to find the
+optimal tradeoff between the following factors:
+\begin{itemize}
+\item The setup time of the iteration/preconditioner;
+\item The runtime  efficiency of the kernels necessary to apply the 
+  preconditioner at each iteration; 
+\item The reduction in the number of iterations to convergence that
+  can be achieved;
+\item The sensitivity of the method/preconditioner pair to the usage
+  conditions, e.g. the number of computational cores on which the
+  program is run. 
+\end{itemize}
+An ideal solver/preconditioner pair will achieve convergence in few
+iterations, each one failry cheap, with the number of iterations to
+convergence independent of the degree of parallelism desired. 
+
