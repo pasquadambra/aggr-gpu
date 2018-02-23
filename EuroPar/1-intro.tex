@@ -7,9 +7,11 @@ We are concerned with the solution of linear sysutems
 \label{eq:linsys}
 \end{equation}
 where the matrix $A$ is large and sparse;  \emph{large}  in our
-context means millions or even billions of unknowns, whreas
+context means millions or even billions of unknowns, whereas
 \emph{sparse} means that most coefficients in $A$ are zero, and it is
-convenient to employ special storage formats. 
+convenient to employ special storage formats. In many applications,
+and specifically in the test cases discussed in this paper, the matrix
+$A$ is also symmetric and positive definite, or SPD. 
 
 Many popular algorithms for large and sparse systems are
 \emph{iterative}, i.e. starting from an initial guess $x_0$ they build
@@ -18,7 +20,9 @@ converges to the solution of~\ref{eq:linsys}; since the time to
 solution is determined by the product between the number of iterations
 and the time per iteration, it is clear that the most effective
 methods will be the ones that achieve an optimal trade-off between the
-method complexity and its speed of convergence. 
+method complexity and its speed of convergence. Currently the most
+popular solvers  are those based on  Krylov subspace 
+projection methods~\cite{MR1990645}. 
 
 A critical feature of practical methods is the use of preconditioners,
 i.e transformation of the type 
@@ -43,5 +47,49 @@ optimal tradeoff between the following factors:
 \end{itemize}
 An ideal solver/preconditioner pair will achieve convergence in few
 iterations, each one failry cheap, with the number of iterations to
-convergence independent of the degree of parallelism desired. 
+convergence independent of the degree of parallelism desired. Note
+that in situations where we need to solve multiple linear systems with
+the same coefficient matrix, it is desirable to obtain the best
+possible efficiency during the solution phase even at the expense of a
+longer setup time, because this will be amortized over multiple
+solution steps. 
+
+To implement a linear system solver on a parallel computing
+architecture, we typically use a \emph{domain decomposition} approach,
+in which subsets of the computational domain are assigned to different
+computing nodes. Domain decomposition requires to achieve a number of
+trade-offs among multiple factors:
+\begin{itemize}
+\item Many preconditioners, e.g. Gauss-Seidel or incomplete
+  factorizations, employ kernels for the solution to sparse triangular
+  systems; in using sparse triangular solvers, we normally  want the
+  sparsity pattern to be of the same order as that of the original
+  coefficient matrix;
+\item However, the amount of parallelism available in a sparse
+  triangular solution is dependent on the number of nonzeros in the
+  sparse factors, and is usually very small;
+\item To overcome this issue, most preconditioners use a Block Jacobi
+  or hybrid Gauss-Seidel strategy, in which the sparse triangular
+  solve is used only within the local subdomain, while employing a
+  global Jacobi-like correction;
+\item Unfortunately, the convergence properties of these local schemes
+  deteriorate with increased parallelism.
+\end{itemize}
+The last phenomenon is often described as a loss of \emph{algorithmic
+  scalability}, i.e., the ability to obtain a convergence history that
+is independent of the degree of parallelism. 
+Good preconditioners such as those based on  incomplete factorizations
+are often very efficient in serial  computations but suffer from
+bad algorithmic scalability. 
+Algebraic Multigrid  preconditioners, offer
+a way to recover algorithmic scalability, keeping the convergence
+quality invariant with the degree of parallelism. 
+
+Finding the preconditioning combination that gives the best overall
+performance is thus a very complex enterprise. In this context, the
+ability to combine multiple options in a flexible framework such as
+the one we described in~\cite{mld-toms} is an essential ingredient. 
+
+
+
 

@@ -1,6 +1,6 @@
+
 \section{Algebraic MultiGrid (AMG) Preconditioners}~\label{AMG}
 %
-
 MultiGrid methods are widely used as preconditioners of iterative
 Krylov solver for sparse linear systems. 
 They are very efficient methods, having linear computational
@@ -11,20 +11,18 @@ Equations (PDEs) have to be solved~\cite{Vassilevski2008}.
 Many efforts are related to extend their efficient applicability also
 to more general systems, in particular in the direction of a complete
 algebraic approach, where no information on a possible geometric
-origin of the problem is exploited. In this last case, they are named
+origin of the problem is exploited. In this last case, they are called
 Algebraic MultiGrid (AMG) or Algebraic Multilevel
 methods~\cite{Stuben2001}. 
-MultiGrid methods rely their efficiency on the recursive application
+MultiGrid methods achieve  their efficiency by the recursive application
 of two complementary processes: {relaxation and coarse-grid
   correction}. 
-
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=.8\textwidth]{multilevel.png}
 \caption{A MultiGrid hierarchy.\label{hierarchy}}
 \end{center}
 \end{figure}
-
 
 Relaxation consists in the application of an iterative method, such as
 Jacobi or Gauss-Seidel, to reduce highly oscillatory error components,
@@ -33,8 +31,10 @@ resulting residual equation in an appropriately chosen coarse space
 aimed at reducing the leftover error components. In the classical
 multigrid approach, the coarser grid and the interpolation operator
 for transfer the coarse-grid solution to the original (fine) grid are
-predefined by the geometry of the problem. On the contrary, AMG
-methods address this setup phase, known as \emph{coarsening process},
+predefined by the geometry of the problem. The recursive application
+of this procedure leads to a \emph{multilevel hierarchy} of spaces,
+depicted in fig.~\ref{hierarchy}. AMG
+methods address the setup phase, known as~\emph{coarsening process},
 in an automatic way without using any explicit knowledge of the given
 problem and relying only on system matrix entries. In this work we
 refer to an algebraic coarsening process based on aggregation of
@@ -56,8 +56,7 @@ V-cycle, described in Fig.~\ref{Vcycle}, where an AMG hierarchy of
 $nlev$ prolongator operators $P^k$ and of corresponding coarse
 matrices obtained by the standard variational approach
 $A^{k+1}=(P^{k+1})^TA^kP^{k+1}$ have been built in the setup
-phase. \textbf{Immagino che la formulazione del sistema lineare Ax=b
-  (con A spd) sia stata definita prima da qualche parte}. 
+phase. 
 \begin{figure}[t]
 \begin{center}
 \framebox{
@@ -101,7 +100,3 @@ strictly related to an efficient implementation of the sparse
 matrix-vector multiplication and to the availability of iterative
 methods which can be formulated in terms of that kernel and possible
 vector updates. 
-\textbf{Immagino che l'utilita' di una fase di applicazione
-  particolarmente efficiente, causa necessita' frequente di
-  applicazione in metodi non lineari e/o risoluzione di sistemi
-  multipli sia stata evidenziata nell'in troduzione}.

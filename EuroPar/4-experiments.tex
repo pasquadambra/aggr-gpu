@@ -50,15 +50,24 @@ In tables \ref{cpu-invk} and \ref{gpu-invk} we show results for the case using B
 \label{cpu-invk}
 
 \begin{tabular}{rrrrrrr}
-\multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (ms)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} \\ \hline
-1                      & 4                          & 14                     & 17.74                                                                             & 4.42                                                                            & 320                                                                                  & 22.15                                                                            \\
-2                      & 4                          & 15                     & 19.43                                                                             & 5.05                                                                            & 340                                                                                  & 24.47                                                                            \\
-4                      & 4                          & 18                     & 21.85                                                                             & 6.96                                                                            & 390                                                                                  & 28.81                                                                            \\
-8                      & 4                          & 20                     & 28.32                                                                             & 8.05                                                                            & 400                                                                                  & 36.37                                                                            \\
-16                     & 4                          & 24                     & 26.38                                                                             & 9.59                                                                            & 400                                                                                  & 35.98                                                                            \\
-32                     & 4                          & 29                     & 23.52                                                                             & 11.42                                                                           & 390                                                                                  & 34.93                                                                            \\
-64                     & 4                          & 34                     & 29.61                                                                             & 14.21                                                                           & 420                                                                                  & 43.82                                                                            \\
-128                    & 5                          & 29                     & 28.39                                                                             & 13.19                                                                           & 450                                                                                  & 41.58                                                                           
+% \multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} &   \multicolumn{1}{l}{Iters} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\  
+%  time (s)\end{tabular}} &
+%                           \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  
+% Time (s)\end{tabular}} &
+%                          \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ 
+% Iteration (ms)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} \\ \hline
+NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Ttotal \\
+    &        &       & (s)    & (s)    & (ms)   & (s)    \\
+\hline
+1   & 4       & 14  & 17.74 & 4.42  & 320      & 22.15   \\
+2   & 4       & 15  & 19.43 & 5.05  & 340      & 24.47   \\
+4   & 4       & 18  & 21.85 & 6.96  & 390      & 28.81   \\
+8   & 4       & 20  & 28.32 & 8.05  & 400      & 36.37   \\
+16  & 4       & 24  & 26.38 & 9.59  & 400      & 35.98   \\
+32  & 4       & 29  & 23.52 & 11.42 & 390      & 34.93   \\
+64  & 4       & 34  & 29.61 & 14.21 & 420      & 43.82   \\
+128 & 5       & 29  & 28.39 & 13.19 & 450      & 41.58    \\
+\hline
 \end{tabular}
 \end{table}
 
@@ -68,16 +77,19 @@ In tables \ref{cpu-invk} and \ref{gpu-invk} we show results for the case using B
 \label{gpu-invk}
 
 \begin{tabular}{rrrrrrrr}
-\multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (ms)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Speed up\\ cpu/gpu\end{tabular}} \\ \hline
-1                      & 4                          & 14                     & 18.80                                                                             & 0.45                                                                            & 30                                                                                  & 19.24                                                                            & 9.92                                                                           \\
-2                      & 4                          & 15                     & 20.55                                                                             & 0.54                                                                            & 40                                                                                  & 21.09                                                                            & 9.40                                                                           \\
-4                      & 4                          & 18                     & 22.84                                                                             & 0.69                                                                            & 40                                                                                  & 23.54                                                                            & 10.08                                                                          \\
-8                      & 4                          & 20                     & 29.18                                                                             & 0.86                                                                            & 40                                                                                  & 30.03                                                                            & 9.40                                                                           \\
-16                     & 4                          & 24                     & 27.38                                                                             & 1.12                                                                            &
-50                                                                                  & 28.50                                                                            & 8.57                                                                           \\
-32                     & 4                          & 29                     & 23.74                                                                             & 1.29                                                                            & 40                                                                                  & 25.02                                                                            & 8.85                                                                           \\
-64                     & 4                          & 34                     & 30.53                                                                             & 1.79                                                                            & 50                                                                                  & 32.32                                                                            & 7.94                                                                           \\
-128                    & 5                          & 29                     & 29.48                                                                             & 2.22                                                                            & 80                                                                                  & 31.70                                                                            & 5.94                                                                          
+% \multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (ms)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Speed up\\ cpu/gpu\end{tabular}} \\ \hline
+NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Ttotal & Speedup\\
+    &        &       & (s)    & (s)    & (ms)   & (s)   &  \\
+\hline
+1   & 4       & 14  & 18.80 & 0.45 & 30   & 19.24& 9.92  \\
+2   & 4       & 15  & 20.55 & 0.54 & 40   & 21.09& 9.40  \\
+4   & 4       & 18  & 22.84 & 0.69 & 40   & 23.54& 10.08 \\
+8   & 4       & 20  & 29.18 & 0.86 & 40   & 30.03& 9.40  \\
+16  & 4       & 24  & 27.38 & 1.12 & 50   & 28.50& 8.57  \\
+32  & 4       & 29  & 23.74 & 1.29 & 40   & 25.02& 8.85  \\
+64  & 4       & 34  & 30.53 & 1.79 & 50   & 32.32& 7.94  \\
+128 & 5       & 29  & 29.48 & 2.22 & 80   & 31.70& 5.94  \\
+\hline
 \end{tabular}
 \end{table}
 
@@ -92,15 +104,19 @@ The results for the case using two sweeps of a Jacobi smoother on inner levels a
 \label{cpu-jac}
 
 \begin{tabular}{rrrrrrr}
-\multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} \\ \hline
-1                      & 4                          & 19                     & 2.83                                                                              & 3.76                                                                            & 200                                                                                  & 6.59                                                                             \\
-2                      & 4                          & 21                     & 3.65                                                                              & 4.57                                                                            & 220                                                                                  & 8.23                                                                             \\
-4                      & 4                          & 20                     & 4.21                                                                              & 5.13                                                                            & 260                                                                                  & 9.35                                                                             \\
-8                      & 4                          & 25                     & 4.75                                                                              & 6.58                                                                            & 260                                                                                  & 11.33                                                                            \\
-16                     & 4                          & 27                     & 4.97                                                                              & 7.21                                                                            & 270                                                                                  & 12.18                                                                            \\
-32                     & 4                          & 31                     & 4.88                                                                              & 8.21                                                                            & 260                                                                                  & 13.09                                                                            \\
-64                     & 4                          & 37                     & 5.79                                                                              & 10.20                                                                           & 280                                                                                  & 16.00                                                                            \\
-128                    & 5                          & 31                     & 6.72                                                                              & 11.16                                                                           & 360                                                                                  & 17.88                                                                           
+% \multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} \\ \hline
+NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Ttotal \\
+    &        &       & (s)    & (s)    & (ms)   & (s)    \\
+\hline
+1   & 4       & 19  & 2.83  & 3.76  & 200   & 6.59    \\
+2   & 4       & 21  & 3.65  & 4.57  & 220   & 8.23    \\
+4   & 4       & 20  & 4.21  & 5.13  & 260   & 9.35    \\
+8   & 4       & 25  & 4.75  & 6.58  & 260   & 11.33   \\
+16  & 4       & 27  & 4.97  & 7.21  & 270   & 12.18   \\
+32  & 4       & 31  & 4.88  & 8.21  & 260   & 13.09   \\
+64  & 4       & 37  & 5.79  & 10.20 & 280   & 16.00   \\
+128 & 5       & 31  & 6.72  & 11.16 & 360   & 17.88  \\
+\hline
 \end{tabular}
 \end{table}
 
@@ -109,22 +125,41 @@ The results for the case using two sweeps of a Jacobi smoother on inner levels a
 \caption{Numerical results for CG + ML preconditioner, runs on GPUs, with 2 sweeps of JACOBI as smoother on inner levels.}
 \label{gpu-jac}
 \begin{tabular}{rrrrrrrr}
-\multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Speed up\\ cpu/gpu\end{tabular}} \\ \hline
-1                      & 4                          & 19                     & 3.13                                                                              & 0.40                                                                            & 20                                                                                  & 3.53                                                                             & 9.39                                                                           \\
-2                      & 4                          & 21                     & 4.06                                                                              & 0.52                                                                            & 20                                                                                  & 4.59                                                                             & 8.73                                                                           \\
-4                      & 4                          & 20                     & 4.65                                                                              & 0.63                                                                            & 30                                                                                  & 5.28                                                                             & 8.16                                                                           \\
-8                      & 4                          & 25                     & 5.20                                                                              & 0.85                                                                            & 30                                                                                  & 6.05                                                                             & 7.74                                                                           \\
-16                     & 4                          & 27                     & 5.39                                                                              & 1.02                                                                            & 40                                                                                  & 6.42                                                                             & 7.06                                                                           \\
-32                     & 4                          & 31                     & 5.35                                                                              & 1.24                                                                            & 40                                                                                  & 6.59                                                                             & 6.61                                                                           \\
-64                     & 4                          & 37                     & 6.25                                                                              & 1.71                                                                            & 50                                                                                  & 7.96                                                                             & 5.98                                                                           \\
-128                    & 5                          & 31                     & 7.19                                                                              & 2.23                                                                            & 70                                                                                  & 9.43                                                                             & 5.00                                                                          
+% \multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Speed up\\ cpu/gpu\end{tabular}} \\ \hline
+NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Ttotal & Speedup\\
+    &        &       & (s)    & (s)    & (ms)   & (s)   &  \\
+\hline
+1   & 4       & 19  & 3.13  & 0.40 & 20   & 3.53 & 9.39  \\
+2   & 4       & 21  & 4.06  & 0.52 & 20   & 4.59 & 8.73  \\
+4   & 4       & 20  & 4.65  & 0.63 & 30   & 5.28 & 8.16  \\
+8   & 4       & 25  & 5.20  & 0.85 & 30   & 6.05 & 7.74  \\
+16  & 4       & 27  & 5.39  & 1.02 & 40   & 6.42 & 7.06  \\
+32  & 4       & 31  & 5.35  & 1.24 & 40   & 6.59 & 6.61  \\
+64  & 4       & 37  & 6.25  & 1.71 & 50   & 7.96 & 5.98  \\ 
+128 & 5       & 31  & 7.19  & 2.23 & 70   & 9.43 & 5.00  \\
+\hline
 \end{tabular}
 \end{table}
 
 
-When GPUs are used, the last column shows the speed-up of the solver phase on the gpu with respect to the cpu solve time. The speed-up achieves a maximum value of 10 in the case of 8 processes and it achieves a value slightly bigger than 5 with 128 processes. In this latter case, the increasing number of levels leads to a decreasing in the size of the coarsest level matrix, which can explain the decreasing of the speed-up. Despite that, in all cases the use of GPUs positively affects the performance of the solve phase. 
-We point out that the all the cases examined show good algorithmic scalability. It means that the number of iterations needed to achieve convergence stays almost constant as the number of processes grows. 
-Finally, we show that excellent scalability is achieved for the solve phase, by plotting the time per single iteration versus the number of processes (Figure \ref{fig:time_per_it}). In the case with GPUs, this value is almost constant up to 64 processes. A small increasing can be appreciated in the case with 128 process but, as previously pointed out, this is due to the increasing in the number of levels and hence in the complexity of the preconditioner.     
+When GPUs are used, the last column shows the speed-up of the solver
+phase on the gpu with respect to the cpu solve time. The speed-up
+achieves a maximum value of 10 in the case of 8 processes and it
+achieves a value slightly bigger than 5 with 128 processes. In this
+latter case, the increasing number of levels leads to a decreasing in
+the size of the coarsest level matrix, which can explain the
+decreasing of the speed-up. Despite that, in all cases the use of GPUs
+positively affects the performance of the solve phase.  
+We point out that the all the cases examined show good algorithmic
+scalability. It means that the number of iterations needed to achieve
+convergence stays almost constant as the number of processes grows.  
+Finally, we show that excellent scalability is achieved for the solve
+phase, by plotting the time per single iteration versus the number of
+processes (Figure \ref{fig:time_per_it}). In the case with GPUs, this
+value is almost constant up to 64 processes. A small increasing can be
+appreciated in the case with 128 process but, as previously pointed
+out, this is due to the increasing in the number of levels and hence
+in the complexity of the preconditioner.      
 
 \begin{figure}[h!]
 \caption{Time per iteration}
