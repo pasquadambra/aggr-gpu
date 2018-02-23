@@ -1,12 +1,13 @@
 \section{Algebraic MultiGrid (AMG) Preconditioners}~\label{AMG}
 %
+
 MultiGrid methods are widely used as preconditioners of iterative
 Krylov solver for sparse linear systems. 
 They are very efficient methods, having linear computational
 complexity and hence perfect scalability, when 
 sparse and large linear systems stemming
 from the discretization of some scalar elliptic Partial Differential
-Equations (PDEs) have to be solved~\cite{V2008}. 
+Equations (PDEs) have to be solved~\cite{Vassilevski2008}. 
 Many efforts are related to extend their efficient applicability also
 to more general systems, in particular in the direction of a complete
 algebraic approach, where no information on a possible geometric
@@ -73,6 +74,7 @@ end
 \caption{V-cycle preconditioner.\label{Vcycle}}
 \end{center}
 \end{figure}
+
 We observe that in Fig.~\ref{Vcycle}, $M^k$ represents the matrix
 operator corresponding to the basic iterative method applied at the
 level $k$ for relaxation. 
