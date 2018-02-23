@@ -41,9 +41,8 @@ For each configuration, we ran tests only on CPUs (with matrices in
 CSR format) and using CPUs+GPUs (with matrices in ELG format). This
 allows us to quantify the gain in efficiency in using GPUs.   
 
-In tables \ref{cpu-invk} and \ref{gpu-invk} we show results for the case using BJAC(INVK) smoother on the inner levels.
 
-
+\iffalse
 \begin{table}[h!]
 \centering
 \caption{Numerical results for CG + ML preconditioner, runs on CPUs, with 1 sweep of BJAC(INVK) as smoother on inner levels.}
@@ -92,12 +91,50 @@ NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Ttotal & Speedup\\
 \hline
 \end{tabular}
 \end{table}
+\else
+
+\begin{table}[h!]
+\centering
+\label{gpu-invk}
+\begin{tabular}{rrrrrrrrr}
+% \multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} &
+% \multicolumn{1}{l}{It} &
+% \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time
+% (s)\end{tabular}} &
+% \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time
+% (s)\end{tabular}} &
+% \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration
+% (ms)\end{tabular}} &
+% \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time
+% (s)\end{tabular}} &
+% \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Speed up\\
+% cpu/gpu\end{tabular}} \\ \hline
+    &        &       &        & \multicolumn{2}{c}{CPU} & \multicolumn{2}{c}{GPU} & \\
+NP  & Levels & Iters & Tsetup & Tsolve & T/iter  & Tsolve & T/iter  & Speedup\\
+    &        &       & (s)    & (s)    & (ms)    & (s)    & (ms)    & GPU/CPU \\
+\hline
+1   & 4       & 14  & 18.80 & 4.42  & 320    & 0.45 & 30   &  9.92  \\
+2   & 4       & 15  & 20.55 & 5.05  & 340    & 0.54 & 40   &  9.40  \\
+4   & 4       & 18  & 22.84 & 6.96  & 390    & 0.69 & 40   &  10.08 \\
+8   & 4       & 20  & 29.18 & 8.05  & 400    & 0.86 & 40   &  9.40  \\
+16  & 4       & 24  & 27.38 & 9.59  & 400    & 1.12 & 50   &  8.57  \\
+32  & 4       & 29  & 23.74 & 11.42 & 390    & 1.29 & 40   &  8.85  \\
+64  & 4       & 34  & 30.53 & 14.21 & 420    & 1.79 & 50   &  7.94  \\
+128 & 5       & 29  & 29.48 & 13.19 & 450    & 2.22 & 80   &  5.94  \\
+\hline
+\end{tabular}
+\caption{Weak Scalability,  CG + ML preconditioner,  with 1 sweep of BJAC(INVK) smoother on inner levels.}
+\end{table}
+
+\fi
 
 
 
-
-The results for the case using two sweeps of a Jacobi smoother on inner levels are shown in tables \ref{cpu-jac} and \ref{gpu-jac}
-
+In table \ref{gpu-invk} we show results for the case using BJAC(INVK)
+smoother on the inner levels, whereas the results for the case using
+two sweeps of a Jacobi smoother on inner levels are shown in tables
+\ref{gpu-jac} 
+\iffalse
 \begin{table}[h!]
 \centering
 \caption{Numerical results for CG + ML preconditioner, runs on CPUs, with 2 sweeps of JACOBI as smoother on inner levels.}
@@ -140,7 +177,30 @@ NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Ttotal & Speedup\\
 \hline
 \end{tabular}
 \end{table}
+\else
 
+\begin{table}[h!]
+\centering
+\label{gpu-jac}
+\begin{tabular}{rrrrrrrrrrr}
+% \multicolumn{1}{l}{np} & \multicolumn{1}{l}{levels} & \multicolumn{1}{l}{It} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Prec    \\   time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Solve  \\  Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Time per \\ Iteration (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Total  \\   Time (s)\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Speed up\\ cpu/gpu\end{tabular}} \\ \hline
+    &        &       &        & \multicolumn{2}{c}{CPU} &\multicolumn{2}{c}{GPU} & \\
+NP  & Levels & Iters & Tsetup & Tsolve & T/iter & Tsolve & T/iter  & Speedup\\
+    &        &       & (s)    & (s)    & (ms)   & (s)    & (ms)    & GPU/CPU \\
+\hline
+1   & 4       & 19  & 3.13  & 3.76  & 200 & 0.40 & 20   & 9.39  \\
+2   & 4       & 21  & 4.06  & 4.57  & 220 & 0.52 & 20   & 8.73  \\
+4   & 4       & 20  & 4.65  & 5.13  & 260 & 0.63 & 30   & 8.16  \\
+8   & 4       & 25  & 5.20  & 6.58  & 260 & 0.85 & 30   & 7.74  \\
+16  & 4       & 27  & 5.39  & 7.21  & 270 & 1.02 & 40   & 7.06  \\
+32  & 4       & 31  & 5.35  & 8.21  & 260 & 1.24 & 40   & 6.61  \\
+64  & 4       & 37  & 6.25  & 10.20 & 280 & 1.71 & 50   & 5.98  \\ 
+128 & 5       & 31  & 7.19  & 11.16 & 360 & 2.23 & 70   & 5.00  \\
+\hline
+\end{tabular}
+\caption{Weak Scalability,  CG + ML preconditioner,  with 2 sweeps of JACOBI smoother on inner levels.}
+\end{table}
+\fi
 
 When GPUs are used, the last column shows the speed-up of the solver
 phase on the gpu with respect to the cpu solve time. The speed-up
