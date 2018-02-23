@@ -1,2 +1,8 @@
 \section{Results}
-Distribuzione dati fatta tenendo conto della geometria (3D) del problema e giustificandola rispetto al vantaggio che fornisce in termini di rapporto calcolo/comunicazione
+(Distribuzione dati fatta tenendo conto della geometria (3D) del problema e giustificandola rispetto al vantaggio che fornisce in termini di rapporto calcolo/comunicazione.)
+
+We illustrate the behaviour of the AMG preconditioner and the INVK solver on GPUs  by showing the results obtained on a linear system arisen from a groundwater modelling application developed at the Juelich Supercomputing Centre (JSC)  dealing with numerical simulation of the filtration of 3D incompressible single-phase flows through anisotropic porous media. It is an elliptic equation with no flow boundary conditions. The linear systems arises from the discretization of the equation performed by a cell-centered finite colume scheme (two-point flux approximation) on a Cartesian grid, with nonzero entries distributed over seven diagonals. In these tests, we will consider a homogeneous permeability tensor. In the following we will consider matrice with dimensions ranging from 1 million to 256 millions of equations.  
+This application comes from the framework of the Horizon 2020 EoCoE Project.
+
+We ran experiments on the JURECA supercomputer at the Juelich Supercomputing Centre (JSC).  Each GPU compute node consists of two NVIDIA Tesla K80 GPUs with a dual-GPU design, for a total of four available GPU devices per compute nodes. 
+We used GCC/5.4.0 and MVAPICH2/2.3 with CUDA 8.0.61.
